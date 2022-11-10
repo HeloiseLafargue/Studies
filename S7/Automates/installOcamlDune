@@ -1,0 +1,10 @@
+Dans le terminal depuis hlafargu (dans doc) :
+vim .bashrc
+"i" pour insérer, puis rajouter :
+test -r /applications/opam/opam-init/init.sh &&
+. /applications/opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+pour quitter: echap, :wq
+
+
+
