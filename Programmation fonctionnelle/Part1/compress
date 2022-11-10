@@ -1,5 +1,0 @@
-Compression fichier/dossier dans le terminal :
-
-tar -czf sourcesEtu.tar sourcesEtu/
-
-
