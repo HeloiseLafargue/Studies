@@ -1,2 +1,2 @@
-# ENSEEIHT
-Masters of computer science at ENSEEIHT
+### ENSEEIHT
+💻 Masters of computer science at ENSEEIHT
