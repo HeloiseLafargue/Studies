@@ -1,0 +1,14 @@
+type token =
+    UL_PT
+  | UL_PAROUV
+  | UL_PARFER
+  | UL_IDENT of string
+  | UL_FIN
+  | UL_ENTIER of int
+val menhir_begin_marker : int
+val xv_scheme : unit
+val xv_expression4 : unit
+val xv_expression3 : unit
+val xv_expression2 : unit
+val xv_expression : unit
+val menhir_end_marker : int
