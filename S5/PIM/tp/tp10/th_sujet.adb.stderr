@@ -1,0 +1,6 @@
+th_sujet.adb:3:33: warning: use clause for package "SDA_Exceptions" has no effect [-gnatwu]
+th_sujet.adb:33:18: warning: function "&" is not referenced [-gnatwu]
+th.adb:41:29: error: "Unbounded_String" is not visible
+th.adb:41:29: error: non-visible declaration at a-strunb.ads:88
+th.adb:43:12: error: "Length" is not visible (more references follow)
+th.adb:43:12: error: non-visible declaration at a-strunb.ads:93

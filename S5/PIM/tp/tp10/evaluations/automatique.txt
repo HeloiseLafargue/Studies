@@ -1,0 +1,243 @@
+% Validation de http://hpxc/cregut.svn.enseeiht.fr/2021/1sn/pim/tps/hlafargu/tp10
+% Run on 2021-12-06 08:11:52.898121
+
+
+################################################################################
+# Modification des fichiers fournis
+################################################################################
+
+
+================================================================================
+## Fichiers qui NE devaient PAS être modifiés
+================================================================================
+
+* Fichier alea.adb non modifié... ok
+* Fichier alea.ads non modifié... ok
+* Fichier exemple_alea.adb non modifié... ok
+* Fichier exemple_unbounded_string.adb non modifié... ok
+* Fichier sda_exceptions.ads non modifié... ok
+* Fichier test_lca.adb non modifié... ERREUR
+
+  | 258d257
+  | <          pragma Unreferenced (Inutile);
+
+
+================================================================================
+## Fichiers qui DEVAIENT être modifiés
+================================================================================
+
+* Fichier lca_sujet.adb modifié... ok
+* Fichier lca.ads modifié... ok
+* Fichier lca.adb modifié... ok
+* Fichier evaluer_alea_lca.adb modifié... ERREUR
+* Fichier th_sujet.adb modifié... ok
+* Fichier test_th.adb modifié... ok
+* Fichier th.ads modifié... ok
+* Fichier th.adb modifié... ok
+* Fichier evaluer_alea_th.adb modifié... ERREUR
+
+
+################################################################################
+# Nettoyer
+################################################################################
+
+* Running gnatclean... ok
+
+
+################################################################################
+# Exercice 1
+################################################################################
+
+
+================================================================================
+## Modifications de lca.ads
+================================================================================
+
+* Comparaison de lca.ads et fournis/lca.ads... différents
+
+   | -- AVEC_AFFICHER_DEBUG START DELETE                                                                <
+   |         -- Afficher la Sda en révélant sa structure interne.                                       <
+   | --      generic                                                                                    <
+   | --              with procedure Afficher_Cle (Cle : in T_Cle);                                      <
+   | --              with procedure Afficher_Donnee (Donnee : in T_Donnee);                             <
+   | --      procedure Afficher_Debug (Sda : in T_LCA);                                                 <
+   |                                                                                                    <
+   |                                                                                                    <
+   | -- AVEC_AFFICHER_DEBUG STOP DELETE                                                                 <
+   |         type T_Cellule;                                                                            |          -- TODO : à compléter
+   |                                                                                                    <
+   |         type T_LCA is access T_Cellule;                                                            <
+   |         type T_Cellule is                                                                          <
+   |                 record                                                                             <
+   |              Cle : T_Cle;                                                                          <
+   |              Donnee: T_Donnee;                                                                     <
+   |                     Suivant: T_LCA;                                                                <
+   |                 end record;                                                                        <
+
+
+================================================================================
+## Exécution de lca_sujet.adb
+================================================================================
+
+* Compilation de lca_sujet.adb... ok
+* ./lca_sujet... ERREUR
+
+  ! raised CONSTRAINT_ERROR : lca.adb:36 access check failed
+
+* Exécution avec valgrind... NON LANCÉE (car erreur sans valgrind)... 
+
+================================================================================
+## Exécution de test_lca.adb
+================================================================================
+
+* Compilation de test_lca.adb... ok
+
+  | test_lca.adb:281:35: warning: formal parameter "Cle" is not referenced
+
+* ./test_lca... ERREUR
+
+  ! raised CONSTRAINT_ERROR : lca.adb:36 access check failed
+
+* Exécution avec valgrind... NON LANCÉE (car erreur sans valgrind)... 
+
+
+################################################################################
+# Exercice 2
+################################################################################
+
+
+================================================================================
+## Différences entre lca.ads et th.ads
+================================================================================
+
+* Comparaison de lca.ads et th.ads... différents
+
+   | -- Définition de structures de données associatives sous forme d'une liste                         |  with LCA ;
+   | -- chaînée associative (LCA).                                                                      |
+   |                                                                                                    >  -- Définition de structures de données associatives sous forme d'un tableau
+   |                                                                                                    >  -- de hachage (TH).
+   | package LCA is                                                                                     |       CAPACITE : Integer;
+   |                                                                                                    >      with function Fct_H(Cle : in T_Cle) return Integer;
+   |                                                                                                    >
+   |                                                                                                    >
+   |                                                                                                    >  package TH is
+   |         -- Initialiser une Sda.  La Sda est vide.                                                  |          -- Initialiser un TH.  Le TH est vide.
+   |         procedure Initialiser(Sda: out T_LCA) with                                                 |          procedure Initialiser(TH: out T_TH) with  
+   |                 Post => Est_Vide (Sda);                                                            |                  Post => Est_Vide (TH);
+   |         -- Est-ce qu'une Sda est vide ?                                                            |          -- Est-ce qu'un TH est vide ?
+   |         function Est_Vide (Sda : T_LCA) return Boolean;                                            |          function Est_Vide (TH : T_TH) return Boolean;  
+   |         -- Obtenir le nombre d'éléments d'une Sda.                                                 |          -- Obtenir le nombre d'éléments d'un TH.
+   |         function Taille (Sda : in T_LCA) return Integer with                                       |          function Taille (TH : in T_TH) return Integer with  
+   |                         and (Taille'Result = 0) = Est_Vide (Sda);                                  |                          and (Taille'Result = 0) = Est_Vide (TH);
+   |         -- Enregistrer une Donnée associée à une Clé dans une Sda.                                 |          -- Enregistrer une Donnée associée à une Clé dans un TH.
+   |         -- Si la clé est déjà présente dans la Sda, sa donnée est changée.                         |          -- Si la clé est déjà présente dans le TH, sa donnée est changée.
+   |         procedure Enregistrer (Sda : in out T_LCA ; Cle : in T_Cle ; Donnee : in T_Donnee) with    |          procedure Enregistrer (TH : in out T_TH ; Cle : in T_Cle; Donnee : in T_Donnee) with  
+   |                 Post => Cle_Presente (Sda, Cle) and (La_Donnee (Sda, Cle) = Donnee)   -- donnée in |                  Post => Cle_Presente (TH, Cle) and (La_Donnee (TH, Cle) = Donnee)  -- donnée insér
+   |                                 and (not (Cle_Presente (Sda, Cle)'Old) or Taille (Sda) = Taille (S |                                  and (not (Cle_Presente (TH, Cle)'Old) or Taille (TH) = Taille (TH)
+   |                                 and (Cle_Presente (Sda, Cle)'Old or Taille (Sda) = Taille (Sda)'Ol |                                  and (Cle_Presente (TH, Cle)'Old or Taille (TH) = Taille (TH)'Old +
+   |         -- Supprimer la Donnée associée à une Clé dans une Sda.                                    |          -- Supprimer la Donnée associée à une Clé dans un TH.
+   |         -- Exception : Cle_Absente_Exception si Clé n'est pas utilisée dans la Sda                 |          -- Exception : Cle_Absente_Exception si Clé n'est pas utilisée dans le TH
+   |         procedure Supprimer (Sda : in out T_LCA ; Cle : in T_Cle) with                             |          procedure Supprimer (TH : in out T_TH ; Cle : in T_Cle) with  
+   |                 Post =>  Taille (Sda) = Taille (Sda)'Old - 1 -- un élément de moins                |                  Post =>  Taille (TH) = Taille (TH)'Old - 1 -- un élément de moins
+   |                         and not Cle_Presente (Sda, Cle);         -- la clé a été supprimée         |                          and not Cle_Presente (TH, Cle);         -- la clé a été supprimée
+   |         -- Savoir si une Clé est présente dans une Sda.                                            |          -- Savoir si une Clé est présente dans un TH.
+   |         function Cle_Presente (Sda : in T_LCA ; Cle : in T_Cle) return Boolean;                    |          function Cle_Presente (TH : in T_TH ; Cle : in T_Cle) return Boolean;  
+   |         -- Obtenir la donnée associée à une Cle dans la Sda.                                       |          -- Obtenir la donnée associée à une Cle dans le TH.
+   |         -- Exception : Cle_Absente_Exception si Clé n'est pas utilisée dans l'Sda                  |          -- Exception : Cle_Absente_Exception si Clé n'est pas utilisée dans le TH
+   |         function La_Donnee (Sda : in T_LCA ; Cle : in T_Cle) return T_Donnee;                      |          function La_Donnee (TH : in T_TH ; Cle : in T_Cle) return T_Donnee;  
+   |         -- Supprimer tous les éléments d'une Sda.                                                  |          -- Supprimer tous les éléments d'un TH.
+   |         procedure Vider (Sda : in out T_LCA) with                                                  |          procedure Vider (TH : in out T_TH) with  
+   |                 Post => Est_Vide (Sda);                                                            |                  Post => Est_Vide (TH);
+   |         -- Appliquer un traitement (Traiter) pour chaque couple d'une Sda.                         |          -- Appliquer un traitement (Traiter) pour chaque couple d'un TH.
+   |         procedure Pour_Chaque (Sda : in T_LCA);                                                    |          procedure Pour_Chaque (TH : in T_TH);  
+   |                                                                                                    <
+   |                                                                                                    <
+   | -- AVEC_AFFICHER_DEBUG START DELETE                                                                <
+   |         -- Afficher la Sda en révélant sa structure interne.                                       <
+   | --      generic                                                                                    <
+   | --              with procedure Afficher_Cle (Cle : in T_Cle);                                      <
+   | --              with procedure Afficher_Donnee (Donnee : in T_Donnee);                             <
+   | --      procedure Afficher_Debug (Sda : in T_LCA);                                                 <
+   |                                                                                                    <
+   | -- AVEC_AFFICHER_DEBUG STOP DELETE                                                                 <
+   |         type T_Cellule;                                                                            |      package Liste is new LCA(T_Cle, T_Donnee);
+   |                                                                                                    >      use Liste;
+   |         type T_LCA is access T_Cellule;                                                            |      type T_TH is array (1..CAPACITE) of T_LCA;  
+   |         type T_Cellule is                                                                          |  end TH;
+   |                 record                                                                             <
+   |              Cle : T_Cle;                                                                          <
+   |              Donnee: T_Donnee;                                                                     <
+   |                     Suivant: T_LCA;                                                                <
+   |                 end record;                                                                        <
+   | end LCA;                                                                                           <
+
+
+================================================================================
+## Différences entre test_lca.ads et test_th.ads
+================================================================================
+
+* Comparaison de test_lca.adb et test_th.adb... différents
+
+   | with LCA;                                                                                          |  with TH;
+   |         package LCA_String_Integer is                                                              |
+   |                 new LCA (T_Cle => Unbounded_String, T_Donnee => Integer);                          |          function Hachage (Cle : Unbounded_String) return Integer is
+   |         use LCA_String_Integer;                                                                    |      begin
+   |                                                                                                    >          if Length (Cle) <= 11 then
+   |                                                                                                    >              return Length (Cle);
+   |                                                                                                    >          else
+   |                                                                                                    >              return Length (Cle) mod 11 + 1;
+   |                                                                                                    >          end if;
+   |                                                                                                    >      end Hachage;
+   |                                                                                                    >
+   |                                                                                                    >          package TH_String_Integer is
+   |                                                                                                    >                  new TH (T_Cle => Unbounded_String, T_Donnee => Integer, CAPACITE => 11, Fct_H => H
+   |                                                                                                    >          use TH_String_Integer;
+   |         -- Afficher la Sda.                                                                        |          -- Afficher le TH.
+   |          pragma Unreferenced (Inutile);                                                            <
+
+
+================================================================================
+## Exécution de th_sujet.adb
+================================================================================
+
+* Compilation de th_sujet.adb... ERREUR
+
+  | th_sujet.adb:3:33: warning: use clause for package "SDA_Exceptions" has no effect
+  | th_sujet.adb:33:18: warning: function "&" is not referenced
+  | th.adb:41:29: "Unbounded_String" is not visible
+  | th.adb:41:29: non-visible declaration at a-strunb.ads:87
+  | th.adb:43:12: "Length" is not visible (more references follow)
+  | th.adb:43:12: non-visible declaration at a-strunb.ads:92
+  | gnatmake: "th_sujet.adb" compilation error
+
+
+================================================================================
+## Exécution de test_th.adb
+================================================================================
+
+* Compilation de test_th.adb... ERREUR
+
+  | test_th.adb:267:17: warning: variable "Inutile" is assigned but never read
+  | test_th.adb:290:35: warning: formal parameter "Cle" is not referenced
+  | th.adb:41:29: "Unbounded_String" is not visible
+  | th.adb:41:29: non-visible declaration at a-strunb.ads:87
+  | th.adb:43:12: "Length" is not visible (more references follow)
+  | th.adb:43:12: non-visible declaration at a-strunb.ads:92
+  | gnatmake: "test_th.adb" compilation error
+
+
+
+################################################################################
+# Exercice 3
+################################################################################
+
+* Fichiers non modifiés => exercice non fait... 
+
+
+################################################################################
+# Nettoyer
+################################################################################
+
+* Running gnatclean... ok
+
+<!-- vi: set ts=8: -->

@@ -1,0 +1,2 @@
+th.adb:41:29: error: "Unbounded_String" is undefined
+th.adb:43:12: error: "Length" is undefined (more references follow)

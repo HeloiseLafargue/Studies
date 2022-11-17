@@ -1,0 +1,6 @@
+test_th.adb:267:17: warning: variable "Inutile" is assigned but never read [-gnatwm]
+test_th.adb:290:35: warning: formal parameter "Cle" is not referenced [-gnatwu]
+th.adb:41:29: error: "Unbounded_String" is not visible
+th.adb:41:29: error: non-visible declaration at a-strunb.ads:88
+th.adb:43:12: error: "Length" is not visible (more references follow)
+th.adb:43:12: error: non-visible declaration at a-strunb.ads:93

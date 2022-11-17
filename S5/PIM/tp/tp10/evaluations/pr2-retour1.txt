@@ -1,0 +1,11 @@
+
+* Voir le retour général
+* Voir le retour automatique
+
+* Attention à l'indentation
+* Utiliser `Sda = null` plutôt que `Est_Vide (Sda)`
+* Revoir `Cle_Presente` Utilise Cle_Absente_Exception
+* Supprimer: Incorrecte
+* Vider : faux
+* Pour_Chaque : Incomplete 
+* Afficher : Pourquoi le nouve procedure 'Afficher'?? 

@@ -1,0 +1,75 @@
+% Compte-rendu minimal du mini-projet SDA : LCA et TH
+% Auteur : LAFARGUE Héloïse
+% Groupe de TP : C
+
+
+**Consigne :** Vous devez écrire vos réponse à la place des ... en laissant
+une ligne vide avant et deux après votre réponse.
+
+**Remarque :** Ce document utilise le langage Markdown. On peut en engendrer
+une version PDF en faisant par exemple :
+
+~~~
+pandoc --toc -N -o LISEZ-MOI.pdf LISEZ-MOI.txt
+~~~
+
+
+# Exercice 1
+
+## Question 1.4
+
+**Indiquer les inconvénients/avantages d'une implantation par listes chaînées
+d'une SDA.**
+
+Inconvénients :
+Rechercher un élément dans une liste chaînée peut coûter du temps car les éléments ne sont pas ordonnés. Il faut parcourir la liste pour trouver la clé, cela devient coûteux pour des longues listes avec les appels récursifs.
+
+
+Avantages :
+La taille de la liste est variable (listes dynamiques) donc on peut modifier le nombre d'éléments.
+Pour les listes avec peu d'éléments c'est avantageux par rapport au temps d'exécution : les programmes avec une liste chaîne sont exécutables en temps linéaire.
+
+
+
+# Évaluation expérimentale.
+
+## Performance comparée de LCA et TH
+
+Indiquer ici les résultats obtenus.
+
+...
+
+
+## Qualité du générateur aléatoire
+
+Indiquer les conclusions quant à la qualité du générateur aléatoire.
+
+...
+
+
+
+# Principales difficultés rencontrées
+
+Indiquer ici les principales difficultés rencontrées lors de la réalisation de
+ce projet et comment elles ont été surmontées ou contournéeS.
+
+Erreurs d'utilisation des types et compréhension des tests.
+
+
+# Informations complémentaires
+
+Indiquer ici les informations qui pourraient aider à la compréhension du
+travail réalisé.
+
+Cette partie peut être vide.
+
+...
+
+
+
+# Bilan personnel
+
+Quel bilan personnel tirez vous de ce mini-projet ?
+
+Ce mini-projet m'a permis d'apprendre à mieux utiliser les outils comme les pointeurs, les modules et à essayer de comprendre les tests.
+
