@@ -1,0 +1,10 @@
+find Projets_C -name '*.c' | wc -w
+138
+
+find Projets_C -type d | wc -w
+43
+
+find Projets_C -name '*.c' | xargs grep printf | wc -l
+104
+
+find Projets_C -name '*.c' | sed 's/printf/afficher/g'

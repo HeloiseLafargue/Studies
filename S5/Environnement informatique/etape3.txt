@@ -1,0 +1,11 @@
+cd Annee_1/s5/Env_Informatique
+tar -xvf tps_C.tar
+mkdir Sources
+mkdir Executables
+mv TP?/*.c Sources
+mv TP?/* Executables
+rmdir TP?
+cd ..
+mv Executables Progs_C
+tar -cvf progs_C.tar Progs_C
+vim etape3.txt

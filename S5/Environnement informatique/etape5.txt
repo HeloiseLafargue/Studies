@@ -1,0 +1,14 @@
+cd Annee_1/s5/Env_Informatique/Projets_C$
+ls | wc -w
+8
+
+cd ..
+ls Projets_C/* | wc -w
+76
+
+cd Projets_C
+ls */* | wc -w
+172
+
+cat */*/*.c | wc -l
+728
