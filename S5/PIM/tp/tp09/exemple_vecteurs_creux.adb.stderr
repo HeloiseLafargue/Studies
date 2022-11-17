@@ -1,0 +1,2 @@
+exemple_vecteurs_creux.adb:20:18: error: expected type "Standard.Float"
+exemple_vecteurs_creux.adb:20:18: error: found type universal integer

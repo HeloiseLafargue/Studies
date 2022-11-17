@@ -1,0 +1,4 @@
+stocks_materiel.ads:70:23: error: subtype indication expected
+stocks_materiel.ads:71:23: error: subtype indication expected
+stocks_materiel.ads:72:23: error: subtype indication expected
+stocks_materiel.ads:73:15: error: subtype indication expected

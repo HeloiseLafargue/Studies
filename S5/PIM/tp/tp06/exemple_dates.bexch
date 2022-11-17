@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__exemple_dates.o
+[PROJECT FILES]
+/home/hlafargu/Annee_1/s5/PIM/tp/tp06/tp06.gpr
+20211018123458 efb5678dccc72221b2c535e17c2fa2da
+[BOUND OBJECT FILES]
+/home/hlafargu/Annee_1/s5/PIM/tp/tp06/dates.o
+/home/hlafargu/Annee_1/s5/PIM/tp/tp06/exemple_dates.o
+[GENERATED SOURCE FILES]
+b__exemple_dates.ads
+b__exemple_dates.adb
+b__exemple_dates.ali
+[RESULTING OPTIONS]
+-L/home/hlafargu/Annee_1/s5/PIM/tp/tp06/
+-L/home/hlafargu/Annee_1/s5/PIM/tp/tp06/
+-L/mnt/n7fs/ens/tp_cregut/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/
+-static
+-static-libgcc
+/mnt/n7fs/ens/tp_cregut/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/libgnat.a
+-ldl

@@ -1,0 +1,6 @@
+vecteurs_creux.adb:40:39: warning: formal parameter "V" is not referenced [-gnatwu]
+vecteurs_creux.adb:40:64: warning: formal parameter "Indice" is not referenced [-gnatwu]
+vecteurs_creux.adb:70:39: warning: formal parameter "V1" is not referenced [-gnatwu]
+vecteurs_creux.adb:70:43: warning: formal parameter "V2" is not referenced [-gnatwu]
+vecteurs_creux.adb:97:36: warning: formal parameter "V1" is not referenced [-gnatwu]
+vecteurs_creux.adb:97:40: warning: formal parameter "V2" is not referenced [-gnatwu]
