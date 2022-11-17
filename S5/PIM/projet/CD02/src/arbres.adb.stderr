@@ -1,0 +1,8 @@
+arbres.adb:1:06: warning: redundant with clause in body [-gnatwr]
+arbres.adb:1:33: warning: "Unbounded" is already use-visible through previous use_clause at arbres.ads:1 [-gnatwr]
+arbres.adb:1:33: warning: use clause for package "Unbounded" has no effect [-gnatwu]
+arbres.adb:95:17: warning: variable "New_Cellule" is never read and never assigned [-gnatwv]
+arbres.adb:126:17: warning: variable "Cellule" is never read and never assigned [-gnatwv]
+arbres.adb:262:17: warning: "return" statement missing following this statement [enabled by default]
+arbres.adb:262:17: warning: Program_Error may be raised at run time [enabled by default]
+arbres.adb:293:09: warning: "Etage" is not modified, could be declared constant [-gnatwk]

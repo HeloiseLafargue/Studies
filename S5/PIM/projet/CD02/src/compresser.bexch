@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__compresser.o
+[PROJECT FILES]
+/home/hlafargu/Annee_1/s5/PIM/projet/CD02/src/huffman.gpr
+20220117160539 ff854a5852a66f7e89b906b93b837d1d
+[BOUND OBJECT FILES]
+/home/hlafargu/Annee_1/s5/PIM/projet/CD02/src/arbres.o
+/home/hlafargu/Annee_1/s5/PIM/projet/CD02/src/compresser.o
+[GENERATED SOURCE FILES]
+b__compresser.ads
+b__compresser.adb
+b__compresser.ali
+[RESULTING OPTIONS]
+-L/home/hlafargu/Annee_1/s5/PIM/projet/CD02/src/
+-L/home/hlafargu/Annee_1/s5/PIM/projet/CD02/src/
+-L/mnt/n7fs/ens/tp_cregut/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/
+-static
+-static-libgcc
+/mnt/n7fs/ens/tp_cregut/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/libgnat.a
+-ldl

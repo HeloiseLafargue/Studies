@@ -1,0 +1,320 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -gnatwa
+A -gnata
+A -g
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U arbres%b		arbres.adb		0cfb4245 NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+Z system%s		system.ads		system.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+U arbres%s		arbres.ads		7f6fd0af BN EE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-assert.ads		20210520051127 a718b65c ada.assertions%s
+D a-charac.ads		20210520051127 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051127 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-inteio.ads		20210520051127 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051128 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051128 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210520051129 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D arbres.ads		20220117154028 7c5d8288 arbres%s
+D arbres.adb		20220117154029 e8836246 arbres%b
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D system.ads		20210520051134 a2da961d system%s
+D s-assert.ads		20210520051131 6a49a4e4 system.assertions%s
+D s-atocou.ads		20210520051131 b45c2d8d system.atomic_counters%s
+D s-conca2.ads		20210520051131 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20210520051131 0b705ca5 system.concat_3%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-memory.ads		20210520051132 597d6634 system.memory%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stalib.adb		20210520051133 977290bf system.standard_library%b
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stposu.ads		20210520051133 e251976f system.storage_pools.subpools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [initialiser arbres 10 19 none]
+G c Z s b [est_vide arbres 14 18 none]
+G c Z s b [frequence arbres 18 18 none]
+G c Z s b [valeur arbres 22 18 none]
+G c Z s b [suivant arbres 26 18 none]
+G c Z s b [modifier_frequence arbres 29 19 none]
+G c Z s b [modifier_valeur arbres 32 19 none]
+G c Z s b [modifier_fg arbres 35 19 none]
+G c Z s b [fg arbres 38 18 none]
+G c Z s b [modifier_fd arbres 41 19 none]
+G c Z s b [fd arbres 44 18 none]
+G c Z s b [modifier_suivant arbres 47 19 none]
+G c Z s b [incr_freq arbres 50 19 none]
+G c Z s b [ajouter arbres 53 15 none]
+G c Z s b [inserer arbres 56 15 none]
+G c Z s b [tri arbres 59 14 none]
+G c Z s b [estfeuille arbres 62 18 none]
+G c Z s b [generercodages arbres 65 18 none]
+G c Z s b [code arbres 68 18 none]
+G c Z s b [initcellule arbres 73 19 none]
+G c Z s b [del_suivant arbres 75 19 none]
+G c Z s b [creerfeuille arbres 77 18 none]
+G c Z s b [enregistrer arbres 78 18 none]
+G c Z s b [afficher_codages arbres 79 19 none]
+G c Z s b [indice arbres 89 18 none]
+G c Z s b [ajouterdeb arbres 90 19 none]
+G c Z s b [supprimer arbres 92 18 none]
+G c Z s b [dupliquerdernier arbres 94 19 none]
+G c Z s b [creercodageinfixe arbres 96 18 none]
+G c Z s b [inserer_a_indice arbres 97 19 none]
+G c Z s b [codage arbres 98 14 none]
+G c Z s b [afficher_arbre arbres 100 15 none]
+G c Z s s [t_noeudDI arbres 108 14 none]
+G c Z s s [t_noeudDA arbres 108 14 none]
+G c Z s s [t_noeudDF arbres 108 14 none]
+G c Z s s [t_noeudIP arbres 108 14 none]
+G c Z b b [free arbres 8 19 none]
+G c Z b b [char_to_string_of_single_char arbres 270 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 20|1r6 1r37 21|1r6 1r37 2r6 3r6 3r24 4r6 4r41 9r21
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[17|46] 21|4w10 4r45
+X 10 a-string.ads
+16K13*Strings 35e16 20|1r10 1r41 21|1r10 1r41
+X 13 a-strunb.ads
+83K21*Unbounded 765e26 20|1w18 1r49 21|1w18 1r49
+88R9*Unbounded_String<6|43R9> 744e15 20|68r79 96r63 98r49 115r34 21|45r53
+. 174r63 212r79 260r63
+104V13*To_Unbounded_String{88R9} 21|184s70 185s69 190s28 263s57 264s37
+117V13*To_String{string} 21|285s38
+152V14*"&"{88R9} 21|184s68 185s67 264s62 264s104
+X 16 a-textio.ads
+58K13*Text_IO 725e16 21|3w10 3r28
+262U14*New_Line 21|286s25 319s17 326s17 335s17
+463U14*Put 21|280s13 282s17 283s18 285s25 300s13 302s13 306s17 310s21 312s21
+. 321s21 323s17 328s21 331s17
+X 17 a-tiinio.ads
+80U14*Put 21|301s13[7|18]
+X 19 a-uncdea.ads
+20u15*Unchecked_Deallocation 21|2w10 9r25
+X 20 arbres.ads
+4K9*Arbres 104E14 118l5 118e11 21|6b14 347l5 347t11
+6P14*T_Arbre 10r43 14r38 18r40 22r37 26r38 26r54 29r54 32r51 35r47 35r66
+. 38r32 38r48 41r47 41r66 44r32 44r48 47r52 47r74 50r44 53r38 53r58 56r38
+. 56r58 59r29 59r45 62r40 65r43 65r59 68r37 73r45 75r42 77r86 78r41 78r60
+. 78r76 79r50 82r52 83r47 86r52 87r43 89r37 90r44 90r64 92r43 92r82 94r48
+. 96r47 97r52 97r72 98r33 100r40 106c14 112r35 113r38 114r37 21|9r58 12r43
+. 17r45 24r38 30r40 35r37 40r38 40r54 45r37 50r54 55r51 60r52 60r74 65r47
+. 65r65 70r32 70r48 76r47 76r65 82r32 82r48 87r42 94r43 95r31 107r42 107r62
+. 119r44 119r64 125r42 125r62 126r27 136r52 136r72 147r37 154r33 154r49 155r29
+. 165r41 172r44 172r60 173r25 174r42 175r35 194r41 194r60 194r76 195r29 203r86
+. 204r27 212r37 219r43 219r82 235r47 245r43 253r49 260r47 277r46 291r44 295r39
+10U19*Initialiser 10<32 21|12b19 15l13 15t24
+10p32 Huff{6P14} 11r35 21|12b32 14m17
+14V18*Est_Vide{boolean} 11s25 14>28 19s28 23s28 27s28 30s22 33s22 36s22 39s22
+. 42s22 45s22 48s22 63s22 66s22 69s22 21|24b18 27l13 27t21 97s20 109s20 112s23
+. 128s20 157s20 237s17 247s24 262s24 279s24
+14p28 Huff{6P14} 21|24b28 26r24
+18V18*Frequence{integer} 18>29 21|30b18 33l13 33t22 255s92 301s17
+18p29 Arbre{6P14} 19r38 21|30b29 32r24
+22V18*Valeur{character} 22>26 21|35b18 38l13 38t19 255s109 309s20 312s63
+22p26 Arbre{6P14} 23r38 21|35b26 37r24
+26V18*Suivant{6P14} 26>27 21|40b18 43l13 43t20 256s47 334s19 337s28
+26p27 Arbre{6P14} 27r38 21|40b27 42r24
+29U19*Modifier_Frequence 29=39 29>63 21|50b19 53l13 53t31 207s17
+29p39 Arbre{6P14} 30r32 21|50b39 52r17
+29i63 Frequence{integer} 21|50b63 52r40
+32U19*Modifier_Valeur 32=36 32>60 21|55b19 58l13 58t28 208s17
+32p36 Arbre{6P14} 33r32 21|55b36 57r17
+32e60 Valeur{character} 21|55b60 57r37
+35U19*Modifier_FG 35=32 35>56 21|65b19 68l13 68t24 198s17
+35p32 Arbre{6P14} 36r32 21|65b32 67r17
+35p56 Fils{6P14} 21|65b56 67r42
+38V18*FG{6P14} 38>21 21|70b18 73l13 73t15 315s19 324s28
+38p21 Arbre{6P14} 39r32 21|70b21 72r24
+41U19*Modifier_FD 41=32 41>56 21|76b19 79l13 79t24 199s17
+41p32 Arbre{6P14} 42r32 21|76b32 78r17
+41p56 Fils{6P14} 21|76b56 78r41
+44V18*FD{6P14} 44>21 21|82b18 85l13 85t15 315s39 332s28
+44p21 Arbre{6P14} 45r32 21|82b21 84r24
+47U19*Modifier_Suivant 47=37 47>61 21|60b19 63l13 63t29
+47p37 Arbre{6P14} 48r32 21|60b37 62r17
+47p61 Suivant{6P14} 21|60b61 62r38
+50U19*Incr_Freq 50=30 50>53 21|94b19 102s25 105l13 105t22
+50p30 Huff{6P14} 21|94b30 97r29 99m25 100r23 100r56 100r78 102r35
+50e53 Caractere{character} 21|94b52 99r48 100r41 102r53
+53U15*Ajouter 53=24 53>47 21|107b19 115s25 117l13 117t20 128s41
+53p24 Huff{6P14} 21|107b28 109r30 110m25 111r25 112r33 112r56 115r34
+53p47 Arbre{6P14} 21|107b51 110r33 112r76 115r52
+56U15*Inserer 56=24 56>47 21|125b19 132s22 134l13 134t20 160s25
+56p24 Huff{6P14} 21|125b28 128r30 128m50 129r23 130r46 131m25 132r31
+56p47 Arbre{6P14} 21|125b51 128r56 129r44 130r25 131r33 132r49
+59V14*Tri{6P14} 59>19 21|154b18 159s38 163l13 163t16
+59p19 Huff{6P14} 21|154b23 157r30 157r48 159r43 160r45
+62V18*estFeuille{boolean} 62>29 21|165b18 168l13 168t23 177s28 263s28 308s19
+62p29 Arbre{6P14} 63r31 21|165b30 167r25 167r60
+65V18*GenererCodages{6P14} 65>33 21|172b18 192l13 192t27
+65p33 Huff{6P14} 66r31 21|172b34 190r22
+68V18*Code{13|88R9} 68>24 68>46 21|212b18 215s29 217l13 217t17
+68p24 Codages{6P14} 69r31 21|212b24 214r20 214r64 215r34
+68e46 Caractere{character} 21|212b46 214r41 215r54
+73U19*InitCellule 73<32 21|17b19 21l13 21t24 197s17 206s17
+73p32 Cellule{6P14} 21|17b32 20m17
+75U19*Del_Suivant 75>32 21|87b19 91l9 91t20
+75p32 Huff{6P14} 21|87b32 89r9 90r14
+77V18*CreerFeuille{6P14} 77>32 77>56 21|99s33 203b18 210l13 210t25 255s79
+77i32 Frequence{integer} 21|203b32 207r45
+77e56 Valeur{character} 21|203b56 208r42
+78V18*Enregistrer{6P14} 78>31 78>50 21|194b18 201l13 201t24
+78p31 Arb1{6P14} 21|194b31 198r40
+78p50 Arb2{6P14} 21|194b50 199r40
+79U19*Afficher_Codages 79>37 21|277b15 287s25 289l13 289t29
+79p37 Codages{6P14} 21|277b33 279r33 281r16 283r59 285r48 287r42
+82U32 Traiter 82>41 21|240s25
+82p41 Arbre{6P14}
+83u19*Parcours_Infixe 83>36 21|235b19 239s25 241s25 243l13 243t28
+83p36 Arbre{6P14} 21|235b36 237r26 239r41 240r33 241r41
+86U32 Traiter 86>41 21|248s25
+86p41 Liste{6P14}
+87u19*Pour_Chaque 87>32 21|245b19 249s25 251l13 251t24
+87p32 Liste{6P14} 21|245b32 247r33 248r33 249r37
+89V18*Indice{integer} 89>26 89>46 21|147b18 150s33 152l13 152t19
+89p26 Liste{6P14} 21|147b26 149r20 150r40
+89e46 Valeur{character} 21|147b46 149r39 150r59
+90U19*AjouterDeb 90=30 90>53 21|119b19 123t12
+90p30 Huff{6P14} 21|119b30 121r38 122m17
+90p53 Arbre{6P14} 21|119b53 121r17 122r25
+92V18*Supprimer{6P14} 92=28 92>52 21|219b18 223s46 226l13 226t22
+92p28 Liste{6P14} 21|219b28 221r20 221r58 223r25 223r56 224r32
+92e52 Valeur{character} 21|219b52 221r39 223r75
+94U19*DupliquerDernier 94>37 21|253b19 256s30 258l13 258t29
+94p37 Liste{6P14} 21|253b37 255r28 255r58 255r102 255r116 256r55
+96V18*CreerCodageInfixe{13|88R9} 96>37 21|260b18 264s64 264s107 267l9 267t26
+96p37 Huff{6P14} 21|260b37 262r33 263r39 264r82 264r125
+97U19*Inserer_A_Indice 97=37 97>61 97>81 21|136b19 142s25 144l13 144t29
+97p37 Liste{6P14} 21|136b37 139r46 140m25 142r42
+97p61 Arbre{6P14} 21|136b61 139r25 140r34 142r61
+97i81 i{integer} 21|136b81 138r20 142r68
+98V14*Codage{13|88R9} 98>22 21|45b18 48l13 48t19
+98p22 Arbre{6P14} 21|45b26 47r24
+100U15*Afficher_arbre 100>30 21|291b19 344l12 344t26
+100p30 Huff{6P14} 21|291b34 342r27
+104R14 T_Noeud 106r32 108c14 116e27 21|9r49 20r32 178r48
+110i25*Frequence{integer} 21|32r34 52m27 100m65 100r87 129r32 129r54
+111e25*Valeur{character} 21|37r34 57m27 100r32 149r30 180m45 180r65 214r32
+. 221r30 281r28 283r71
+112p25*Suivant{6P14} 21|42r34 62m27 89m18 90m23 102m44 111m34 112r42 112m65
+. 115m43 121m27 130m35 132m40 139m35 142m52 150r50 159r52 181m45 215r46 221r68
+. 223m35 223m66 249r47 255r38 255m68 287r54
+113p25*Fils_Gauche{6P14} 21|67m27 72r34 167r35 184r48 239r51 264r91
+114p25*Fils_Droit{6P14} 21|78m27 84r34 167r70 185r48 241r51 264r134
+115r25*Codage{13|88R9} 21|47r34 179m45 214r76 285r60
+X 21 arbres.adb
+8U19 Free[19|20] 90s9
+95p17 New_Cellule{20|6P14}
+126p17 Cellule{20|6P14}
+155p17 Huff_Trie{20|6P14} 159m25 160m34 160r34 161r32
+173p17 Liste{20|6P14} 181r56 182m33 191r24
+174U27 aux 174b27 174>31 174>51 184s33 185s33 187l21 187t24 190s17
+174p31 Arbre{20|6P14} 177r39 180r55 184r38 185r38
+174r51 Codage{13|88R9} 179r55 184r61 185r60
+175p25 Cellule{20|6P14} 178m33 179r33 180r33 181r33 182r42
+195p17 New_Arbre{20|6P14} 197m29 197r29 198m29 198r29 199m29 199r29 200r24
+204p17 Feuille{20|6P14} 206m29 206r29 207m36 207r36 208m33 208r33 209r24
+270V14 Char_To_String_Of_Single_Char{string} 270b14 270>46 275l13 275t42
+. 283s29 312s33
+270e46 C{character} 273r30
+271a17 Chaine{string} 273m17 274r24
+293i9 Etage{integer} 342r33
+295U19 Rec_etage 295b19 295>29 295>48 324s17 332s17 337s17 339l14 339t23
+. 342s17
+295p29 Huff{20|6P14} 301r27 305r16 308r30 309r27 312r70 315r22 315r42 324r31
+. 332r31 334r27 337r36
+295i48 Etage{integer} 316r31 320r43 327r43
+297i13 Next_etage{integer} 316m17 324r38 332r38 336m17 336r31 337r43
+320i21 I{integer}
+327i21 I{integer}
+X 24 system.ads
+67M9*Address
+X 34 s-memory.ads
+53V13*Alloc{24|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{24|67M9} 105i<c,__gnat_realloc>22
+X 42 s-stalib.adb
+89U14 Break_Start 90i<c,__gnat_break_start>22
+

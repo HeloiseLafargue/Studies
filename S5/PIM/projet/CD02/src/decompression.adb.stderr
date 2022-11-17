@@ -1,0 +1,6 @@
+decompression.adb:6:06: warning: redundant with clause [-gnatwr]
+decompression.adb:14:18: warning: function "Bin_To_Dec" is not referenced [-gnatwu]
+decompression.adb:29:18: warning: function "Dec_To_Bin" is not referenced [-gnatwu]
+decompression.adb:53:35: warning: formal parameter "nom_fichier" is not referenced [-gnatwu]
+decompression.adb:177:17: warning: "File_Name" is not modified, could be declared constant [-gnatwk]
+decompression.adb:188:43: warning: formal parameter "Oct" is not referenced [-gnatwu]

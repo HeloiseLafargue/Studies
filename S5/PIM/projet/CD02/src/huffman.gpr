@@ -1,0 +1,18 @@
+project Huffman is
+
+   for Main use ("arbres.adb", "compresser.adb", "decompresser.adb", "test_arbres.adb");
+
+   package Builder is
+      for Default_Switches ("ada") use ("-s");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnatwa", "-gnata", "-g");
+   end Compiler;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-E");
+   end Binder;
+
+end Huffman;
+
