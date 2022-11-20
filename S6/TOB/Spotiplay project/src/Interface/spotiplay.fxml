@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface.Controller">
+ <effect>
+      <Lighting diffuseConstant="1.4">
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant>
+               <color>
+                  <Color red="1.0" green="0.9019607901573181" blue="1.0" />
+               </color>
+            </Light.Distant>
+         </light>
+      </Lighting>
+   </effect>
+    <children>
+        <ImageView fx:id="album_image" fitHeight="244.0" fitWidth="244.0" layoutX="379.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@default.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="title_spotiplay2" fill="#862d85" layoutX="173.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SPOTIPLAY" textAlignment="CENTER" wrappingWidth="307.0888671875">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="title_name" fill="#862d85" layoutX="379.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="artist_name" fill="#862d85" layoutX="379.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" />
+      <Text fx:id="album_name" fill="#862d85" layoutX="379.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Album" />
+      <ProgressBar fx:id="progress_bar1" layoutX="379.0" layoutY="466.0" prefHeight="18.0" prefWidth="244.0" progress="0.12">
+         <effect>
+            <Lighting diffuseConstant="1.4" specularConstant="2.0" surfaceScale="0.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#cda7cd" />
+               </light>
+            </Lighting>
+         </effect>
+      </ProgressBar>
+      <ButtonBar layoutX="357.0" layoutY="495.0" prefHeight="40.0" prefWidth="244.0">
+        <buttons>
+          <Button fx:id="previous_music1" mnemonicParsing="false" onAction="#previous" text="⏮" textFill="#862d85" />
+            <Button fx:id="play_music1" mnemonicParsing="false" onAction="#play_pause" text="⏯ " textFill="#862d85" />
+            <Button fx:id="next_music1" mnemonicParsing="false" onAction="#next" text="⏭" textFill="#862d85"/>
+        </buttons>
+      </ButtonBar>
+      <Button fx:id="like_music" layoutX="598.0" layoutY="384.0" mnemonicParsing="false" onAction="#like" text="♡" textFill="#862d85" />
+      <Button fx:id="internet" layoutX="560.0" layoutY="384.0" mnemonicParsing="false" onAction="#internet" text="🌐" textFill="#862d85" />
+      <TabPane layoutX="-2.0" layoutY="103.0" prefHeight="499.0" prefWidth="329.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="label_titre" text="Titres">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollBar fx:id="scroll_titres" layoutX="314.0" orientation="VERTICAL" prefHeight="466.0" prefWidth="15.0" />
+                        <ListView fx:id="liste_titres" prefHeight="467.0" prefWidth="313.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="label_playlist" text="Ma playlist">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollBar fx:id="scroll_playlist" layoutX="314.0" layoutY="1.0" orientation="VERTICAL" prefHeight="467.0" prefWidth="15.0" />
+                        <ListView fx:id="liste_playlist" layoutY="1.0" prefHeight="467.0" prefWidth="315.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="label_artistes" text="Artistes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="297.0">
+                     <children>
+                        <ScrollBar fx:id="scroll_artistes" layoutX="315.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="15.0" />
+                        <ListView fx:id="liste_artistes" prefHeight="469.0" prefWidth="315.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="label_album" text="Albums">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollBar fx:id="scroll_albums" layoutX="314.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="15.0" />
+                        <ListView fx:id="liste_album" prefHeight="467.0" prefWidth="313.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      
+      
+    </children>
+</AnchorPane>
