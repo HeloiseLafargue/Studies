@@ -1,0 +1,244 @@
+# dune build -w @check
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP6"
+# Auto-detected concurrency: 2
+$ /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -config > /tmp/dune_85e042_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/ubuntu/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/home/ubuntu/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/home/ubuntu/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/ubuntu/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP6"
+#        ; "INSIDE_DUNE" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP6/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP6/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP6/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP6/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/ubuntu/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/.sandbox/9c5726505f68ed373d314789c028e5a0/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+> File "tp6.ml", line 11, characters 56-58:
+> 11 |   let rec map : type n.('a->'b) -> ('a,'n) nlist -> ('b,'n) nlist =
+>                                                              ^^
+> Error: In this scoped type, variable 'n is reserved for the local type n.
+[1]
+$ (cd _build/.sandbox/bc5079a1193c4d1c20b9626fa81eaab5/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+> File "tp6.ml", line 11, characters 52-54:
+> 11 |   let rec map : type n.('a->'b)->('a,'n) nlist->('b,'n) nlist =
+>                                                          ^^
+> Error: In this scoped type, variable 'n is reserved for the local type n.
+[1]
+$ (cd _build/.sandbox/9bc18cd8d9674f4dedf6d4c338f2682c/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+$ (cd _build/.sandbox/e7fa79708a77bc242272880aed51a965/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+> File "tp6.ml", line 19, characters 8-9:
+> 19 |         | Cons(t,q) ->
+>              ^
+> Error: Syntax error
+[1]
+$ (cd _build/.sandbox/3bd9e1063647908dc96054eb07265202/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+> File "tp6.ml", line 21, characters 0-3:
+> 21 | end
+>      ^^^
+> Error: Syntax error: 'end' expected
+> File "tp6.ml", line 6, characters 2-8:
+> 6 |   struct
+>       ^^^^^^
+>   This 'struct' might be unmatched
+[1]
+$ (cd _build/.sandbox/58e1fbc7e5372e5b4cb6f87e6fd6681d/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+$ (cd _build/.sandbox/63d259348e4bb3ae5a5b822d65a1a1e9/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+> File "tp6.ml", line 21, characters 29-30:
+> 21 |     let rec tail : type name = 
+>                                   ^
+> Error: Syntax error
+[1]
+$ (cd _build/.sandbox/36496a5d0cfe09608e1fe18247d3d095/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 23, characters 26-29:
+> 23 |         | Cons(e, Nil) -> Nil
+>                                ^^^
+> Error: This expression has type ('a, zero) nlist
+>        but an expression was expected of type ('a, n) nlist
+>        Type zero is not compatible with type n 
+[2]
+$ (cd _build/.sandbox/b3bb6e9f4cf594dc6acc02c23c49f1ce/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 23, characters 26-29:
+> 23 |         | Cons(_, Nil) -> Nil
+>                                ^^^
+> Error: This expression has type ('a, zero) nlist
+>        but an expression was expected of type ('a, n) nlist
+>        Type zero is not compatible with type n 
+[2]
+$ (cd _build/.sandbox/c72363e85b33d296497dd2b5ca2b2a20/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 23, characters 26-29:
+> 23 |         | Cons(_, Nil) -> Nil
+>                                ^^^
+> Error: This expression has type ('b, zero) nlist
+>        but an expression was expected of type ('b, n) nlist
+>        Type zero is not compatible with type n 
+[2]
+$ (cd _build/.sandbox/e3b73ddc378193ff05105c3203098a4a/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 23, characters 23-24:
+> 23 |         | Cons(_,q) -> q
+>                             ^
+> Error: This expression has type ('a, $Cons_'an) nlist
+>        but an expression was expected of type ('a, n) nlist
+>        Type $Cons_'an is not compatible with type n 
+[2]
+$ (cd _build/.sandbox/e6aa802390f90f842e3b57c00526609a/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 9, characters 24-25:
+> 9 |       | Cons : 'a * ('a,n) nlist -> ('a,'n succ) nlist
+>                             ^
+> Error: Unbound type constructor n
+[2]
+$ (cd _build/.sandbox/3e0e1c79ec70cdc51e14a23db477fb29/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 21, characters 12-60:
+> 21 |     let rec tail : type n. ('a,n succ) nlist -> ('a,n) nlist = 
+>                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Warning 39 [unused-rec-flag]: unused rec flag.
+> File "tp6.ml", line 28, characters 28-33:
+> 28 |         | Cons(t,q) -> Cons(rev q, t)
+>                                  ^^^^^
+> Error: This expression has type ('a, $0) nlist
+>        but an expression was expected of type 'a
+>        The type constructor $0 would escape its scope
+[2]
+$ (cd _build/.sandbox/a961cb4cf2789e2c1890561ff3509284/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 21, characters 12-60:
+> 21 |     let rec tail : type n. ('a,n succ) nlist -> ('a,n) nlist = 
+>                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Warning 39 [unused-rec-flag]: unused rec flag.
+> File "tp6.ml", line 29, characters 37-60:
+> 29 |         | Cons(t1, Cons(t2,q)) -> rev( Cons(t1 Cons(t2, q)))
+>                                           ^^^^^^^^^^^^^^^^^^^^^^^
+> Error: The constructor Cons expects 2 argument(s),
+>        but is applied here to 1 argument(s)
+[2]
+$ (cd _build/.sandbox/0e600b091b10ad2ece722d9174a05666/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 21, characters 12-60:
+> 21 |     let rec tail : type n. ('a,n succ) nlist -> ('a,n) nlist = 
+>                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Warning 39 [unused-rec-flag]: unused rec flag.
+$ (cd _build/.sandbox/bf3787b357264de9ec7876e6d287a873/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+$ (cd _build/.sandbox/aea56da4c22bcf5a794bb90a520b0f71/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp6.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp6.objs/byte/tp6.cmo -c -impl tp6.pp.ml)
+> File "tp6.ml", line 36, characters 2-10:
+> 36 |   open Ex1
+>        ^^^^^^^^
+> Warning 33 [unused-open]: unused open Ex1.
+$ (cd _build/.sandbox/c5b4796973e0c6e2b4701eb96ccf44dc/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp6"' -o tp6.pp.ml --impl tp6.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+> File "tp6.ml", line 49, characters 0-3:
+> 49 | end
+>      ^^^
+> Error: Syntax error: 'end' expected
+> File "tp6.ml", line 47, characters 13-19:
+> 47 | module Ex3 = struct
+>                   ^^^^^^
+>   This 'struct' might be unmatched
+[1]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
