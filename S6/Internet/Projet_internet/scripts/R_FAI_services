@@ -1,0 +1,26 @@
+ #!/bin/bash
+ip addr add 129.31.246.195/27 dev eth0
+ip link set dev eth0 up
+ip addr add 129.31.246.225/27 dev eth1
+ip link set dev eth1 up
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# routage statique
+#ip route add 192.168.110.0/25 via 129.31.246.194
+#ip route add 129.31.246.0/25 via 129.31.246.194
+#ip route add 129.31.246.128/26 via 129.31.246.194
+
+iptables -P FORWARD DROP
+# DNS
+iptables -A FORWARD -p udp --dport 53 -d 129.31.246.228 -j ACCEPT
+iptables -A FORWARD -p udp --sport 53 -s 129.31.246.228 -j ACCEPT
+# WEB
+iptables -A FORWARD -p tcp -m multiport --dports 80,443 -d 129.31.246.226 -j ACCEPT
+iptables -A FORWARD -p tcp -m multiport --sports 80,443 -s 129.31.246.226 -j ACCEPT
+#®FTP
+iptables -A FORWARD -p tcp --dport 21 -d 129.31.246.227 -j ACCEPT
+iptables -A FORWARD -p tcp --sport 21 -s 129.31.246.227 -j ACCEPT 
+iptables -A FORWARD -p tcp -m multiport --dports 65000:65534 -d 129.31.246.227 -j ACCEPT
+iptables -A FORWARD -p tcp -m multiport --sports 65000:65534 -s 129.31.246.227 -j ACCEPT
+# ping
+iptables -A FORWARD -p icmp -j ACCEPT

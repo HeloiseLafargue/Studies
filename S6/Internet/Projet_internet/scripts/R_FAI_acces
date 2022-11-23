@@ -1,0 +1,13 @@
+#!/bin/bash
+ip addr add 129.31.246.2/25 dev eth0
+ip link set dev eth0 up
+ip addr add 129.31.246.129/26 dev eth1
+ip link set dev eth1 up
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# routage statique
+#ip route add 192.168.110.0/25 via 129.31.246.1
+#ip route add 129.31.246.192/27 via 129.31.246.130
+#ip route add 129.31.246.224/27 via 129.31.246.130
+
+

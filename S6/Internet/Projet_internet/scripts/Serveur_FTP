@@ -1,0 +1,15 @@
+#!/bin/bash
+ip addr add 129.31.246.227/27 dev eth0
+ip link set dev eth0 up
+
+
+ip route add default via 129.31.246.225
+
+echo nameserver 129.31.246.228 >> /etc/resolv.conf
+echo 127.0.0.1 Serveur_FTP >> /etc/hosts
+
+chmod 644 /etc/proftpd/proftpd.conf
+chmod 644 /etc/proftpd/modules.conf
+chmod 644 etc/proftpd
+
+service proftpd start
