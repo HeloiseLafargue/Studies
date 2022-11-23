@@ -1,0 +1,5 @@
+#!/bin/bash
+ip addr add 129.31.246.227/27 dev eth0
+ip link set dev eth0 up
+echo 1 > /proc/sys/net/ipv4/ip_forward
+ip route add default via 129.31.246.225
