@@ -1,7 +1,0 @@
-#!/bin/bash
-
-while (true)
-do
-   tcpdump -U -i $1 -w $2
-done
-   
