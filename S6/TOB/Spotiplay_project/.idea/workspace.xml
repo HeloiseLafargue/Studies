@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c096d143-3295-4a98-b540-96d8d4b172b8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Nelly\Desktop\YVAN\S4\Web\Projet\spotiplay\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="29Le94mCJoUH0uwCXlDMmG2Kl1c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/ProjetLong/view" />
+    <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-sdk-14/lib" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nelly\Desktop\YVAN\S4\Web\Projet\spotiplay\ProjetLong" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nelly\Desktop\YVAN\S4\Web\Projet\spotiplay\ProjetLong" />
+      <recent name="C:\Users\Nelly\Desktop\YVAN\S4\Web\Projet\spotiplay" />
+      <recent name="C:\Users\Nelly\Desktop\YVAN\S4\Web\Projet\spotiplay\ProjetLong\view\Resource" />
+      <recent name="C:\Users\Nelly\Desktop\YVAN\S4\Web\Projet\spotiplay\ProjetLong\view" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="spotiplay" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-14\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c096d143-3295-4a98-b540-96d8d4b172b8" name="Default Changelist" comment="" />
+      <created>1652896272187</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652896272187</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="47" key="#Project_Structure" timestamp="1652898319354">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="47" key="#Project_Structure/0.0.1366.768@0.0.1366.768" timestamp="1652898319354" />
+    <state x="137" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1652929919686">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="137" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1652929919686" />
+    <state x="532" y="278" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1652896711444">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="532" y="278" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.768@0.0.1366.768" timestamp="1652896711444" />
+    <state x="826" y="288" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1652898163266">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="826" y="288" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1366.768@0.0.1366.768" timestamp="1652898163266" />
+    <state x="203" y="196" key="FileChooserDialogImpl" timestamp="1653054673366">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="203" y="196" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1653054673366" />
+    <state width="1325" height="192" key="GridCell.Tab.0.bottom" timestamp="1653054681664">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1325" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1653054681664" />
+    <state width="1325" height="192" key="GridCell.Tab.0.center" timestamp="1653054681664">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1325" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1653054681664" />
+    <state width="1325" height="192" key="GridCell.Tab.0.left" timestamp="1653054681663">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1325" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1653054681663" />
+    <state width="1325" height="192" key="GridCell.Tab.0.right" timestamp="1653054681664">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1325" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1653054681664" />
+    <state width="1325" height="239" key="GridCell.Tab.1.bottom" timestamp="1652932272319">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1325" height="239" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1652932272319" />
+    <state width="1325" height="239" key="GridCell.Tab.1.center" timestamp="1652932272319">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1325" height="239" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1652932272319" />
+    <state width="1325" height="239" key="GridCell.Tab.1.left" timestamp="1652932272319">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1325" height="239" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1652932272319" />
+    <state width="1325" height="239" key="GridCell.Tab.1.right" timestamp="1652932272319">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1325" height="239" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1652932272319" />
+    <state x="98" y="0" key="SettingsEditor" timestamp="1652931834479">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="98" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1652931834479" />
+    <state x="503" y="167" key="chooseDestDirectoryDialog" timestamp="1652931935351">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="503" y="167" key="chooseDestDirectoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1652931935351" />
+    <state x="375" y="214" key="com.intellij.ide.util.TipDialog" timestamp="1653048811748">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="375" y="214" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1653048811748" />
+    <state x="0" y="14" key="new project wizard" timestamp="1653054675001">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="0" y="14" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1653054675001" />
+  </component>
+</project>
