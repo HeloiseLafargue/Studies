@@ -1,3 +1,3 @@
 ### Projet d'internet
 
-![alt text](https://github.com/HeloiseLafargue/S6/Internet/Projet_internet//blob/main/projet_internet.png?raw=true)
+![alt text](https://github.com/HeloiseLafargue/ENSEEIHT/blob/main/S6/Internet/Projet_internet/projet_internet.png?raw=true)
