@@ -1,0 +1,55 @@
+Problem:    ModelGestionwithData
+Rows:       7
+Columns:    9 (9 integer, 9 binary)
+Non-zeros:  27
+Status:     INTEGER OPTIMAL
+Objective:  CoutTotalFormation = 15 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 UnSeulTravailParPersonne[Leo]
+                                   1             1             = 
+     2 UnSeulTravailParPersonne[Heloise]
+                                   1             1             = 
+     3 UnSeulTravailParPersonne[Tanguy]
+                                   1             1             = 
+     4 UneSeulePersonneParTravail[Maths]
+                                   1             1             = 
+     5 UneSeulePersonneParTravail[Marketing]
+                                   1             1             = 
+     6 UneSeulePersonneParTravail[Coiffure]
+                                   1             1             = 
+     7 CoutTotalFormation
+                                  15                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[Leo,Maths] *              1             0             1 
+     2 x[Leo,Marketing]
+                    *              0             0             1 
+     3 x[Leo,Coiffure]
+                    *              0             0             1 
+     4 x[Heloise,Maths]
+                    *              0             0             1 
+     5 x[Heloise,Marketing]
+                    *              0             0             1 
+     6 x[Heloise,Coiffure]
+                    *              1             0             1 
+     7 x[Tanguy,Maths]
+                    *              0             0             1 
+     8 x[Tanguy,Marketing]
+                    *              1             0             1 
+     9 x[Tanguy,Coiffure]
+                    *              0             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

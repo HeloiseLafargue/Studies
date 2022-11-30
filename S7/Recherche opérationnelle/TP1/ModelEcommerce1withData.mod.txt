@@ -1,0 +1,72 @@
+###############################  Model ###############################
+
+
+
+###############################  Sets  ###############################
+
+set DEMANDES;
+
+set FLUIDES; 
+
+set MAGASINS;	
+
+################### Variables ###################
+
+var x{d in DEMANDES, f in FLUIDES, m in MAGASINS}, >=0; 
+
+###################  Constants: Data to load   #########################
+
+param commandes{d in DEMANDES, f in FLUIDES};
+
+param stocks{m in MAGASINS, f in FLUIDES}; 
+
+param couts{m in MAGASINS, f in FLUIDES}; 
+
+################### Constraints ###################
+
+
+s.t. RespectStock{m in MAGASINS, f in FLUIDES}:
+  sum{d in DEMANDES} x[d,f,m] <= stocks[m,f];
+  
+  RespectCommande{d in DEMANDES, f in FLUIDES}:
+  sum {m in MAGASINS} x[d,f,m] = commandes[d,f];
+
+
+###### Objective ######
+
+minimize CoutTotal: 
+		sum{m in MAGASINS} (sum{f in FLUIDES} couts[m,f] * (sum{d in DEMANDES} x[d,f,m])); 
+
+
+#default data
+
+data;
+
+set DEMANDES := 
+D1
+D2;
+
+set FLUIDES :=
+F1
+F2;
+
+set MAGASINS :=
+M1
+M2
+M3;
+
+param commandes: F1 F2 :=
+D1 2 0
+D2 1 3;
+
+param stocks: F1 F2 :=
+M1 2.5 1
+M2 1 2
+M3 2 1;
+
+param couts: F1 F2 :=
+M1 1 1
+M2 2 3
+M3 3 2;
+
+end;

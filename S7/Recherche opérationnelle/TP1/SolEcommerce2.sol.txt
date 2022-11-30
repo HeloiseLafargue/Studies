@@ -1,0 +1,69 @@
+Problem:    ModelEcommerce2withData
+Rows:       11
+Columns:    12 (12 integer, 0 binary)
+Non-zeros:  36
+Status:     INTEGER OPTIMAL
+Objective:  CoutTotal = 8 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 RespectStock[M1,Burger_Classique]
+                                   2                         2.5 
+     2 RespectStock[M1,Burger_Savoyard]
+                                   2                         2.5 
+     3 RespectStock[M2,Burger_Classique]
+                                   1                           1 
+     4 RespectStock[M2,Burger_Savoyard]
+                                   0                           2 
+     5 RespectStock[M3,Burger_Classique]
+                                   0                           2 
+     6 RespectStock[M3,Burger_Savoyard]
+                                   1                           1 
+     7 RespectCommande[D1,Burger_Classique]
+                                   2             2             = 
+     8 RespectCommande[D1,Burger_Savoyard]
+                                   0            -0             = 
+     9 RespectCommande[D2,Burger_Classique]
+                                   1             1             = 
+    10 RespectCommande[D2,Burger_Savoyard]
+                                   3             3             = 
+    11 CoutTotal                   8                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 x[D1,Burger_Classique,M1]
+                    *              1             0               
+     2 x[D2,Burger_Classique,M1]
+                    *              1             0               
+     3 x[D1,Burger_Savoyard,M1]
+                    *              0             0               
+     4 x[D2,Burger_Savoyard,M1]
+                    *              2             0               
+     5 x[D1,Burger_Classique,M2]
+                    *              1             0               
+     6 x[D2,Burger_Classique,M2]
+                    *              0             0               
+     7 x[D1,Burger_Savoyard,M2]
+                    *              0             0               
+     8 x[D2,Burger_Savoyard,M2]
+                    *              0             0               
+     9 x[D1,Burger_Classique,M3]
+                    *              0             0               
+    10 x[D2,Burger_Classique,M3]
+                    *              0             0               
+    11 x[D1,Burger_Savoyard,M3]
+                    *              0             0               
+    12 x[D2,Burger_Savoyard,M3]
+                    *              1             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

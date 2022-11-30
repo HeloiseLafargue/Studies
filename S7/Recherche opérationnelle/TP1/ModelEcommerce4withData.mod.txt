@@ -1,0 +1,64 @@
+###############################  Model ###############################
+
+
+
+###############################  Sets  ###############################
+
+set NOEUDS;
+
+################### Variables ###################
+
+var x{i in NOEUDS, j in NOEUDS}, binary; 
+
+var u{i in NOEUDS}, integer, >= 1; 
+
+###################  Constants: Data to load   #########################
+
+param distances{i in NOEUDS, j in NOEUDS};
+
+################### Constraints ###################
+
+
+s.t. TrajetEffectue{i in NOEUDS}:
+	x[i,i] = 0;
+	
+s.t. ArriveeUnique{i in NOEUDS}:
+	sum{j in NOEUDS} x[i,j] = 1;
+
+s.t. DepartUnique{j in NOEUDS}:
+	sum{i in NOEUDS} x[i,j] = 1;
+
+s.t. NonBoucleInterne{i in NOEUDS : i <> 'alpha'}:
+	u[i] >= 2;
+	
+s.t. NonBoubleInterneBis{i in NOEUDS, j in NOEUDS : i <> 'alpha' and j <> 'alpha'}:
+	u[i] - u[j] + 1 <= (card(NOEUDS)-1)*(1-x[i,j]);
+
+
+###### Objective ######
+
+minimize DistanceTotale: 
+		sum{i in NOEUDS} sum{j in NOEUDS} x[i,j]*distances[i,j];
+
+
+#default data
+
+data;
+
+set NOEUDS := 
+alpha
+C1
+C2
+C3
+C4
+C5;
+
+param distances: alpha C1 C2 C3 C4 C5 :=
+alpha 0 1 1 10 12 12
+C1 1 0 1 8 10 11
+C2 1 1 0 8 11 10
+C3 10 8 8 0 1 1
+C4 12 10 11 1 0 1
+C5 12 11 10 1 1 0;
+
+end;

@@ -1,0 +1,15 @@
+\* Problem: Assemblage de voitures *\
+
+Maximize
+ MargeTotale: + 10000 L + 9000 S
+
+Subject To
+ TempsDeTravail: + 6 L + 5 S <= 6000
+ LimiteVoituresL: L <= 800
+ SurfaceParking: + 10 L + 20 S <= 15000
+ 
+Generals
+ L
+ S
+
+End

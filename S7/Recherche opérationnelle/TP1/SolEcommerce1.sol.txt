@@ -1,0 +1,65 @@
+Problem:    ModelEcommerce1withData
+Rows:       11
+Columns:    12
+Non-zeros:  36
+Status:     OPTIMAL
+Objective:  CoutTotal = 9.5 (MINimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 RespectStock[M1,F1]
+                    NU           2.5                         2.5            -1 
+     2 RespectStock[M1,F2]
+                    NU             1                           1            -2 
+     3 RespectStock[M2,F1]
+                    B            0.5                           1 
+     4 RespectStock[M2,F2]
+                    B              1                           2 
+     5 RespectStock[M3,F1]
+                    B              0                           2 
+     6 RespectStock[M3,F2]
+                    NU             1                           1            -1 
+     7 RespectCommande[D1,F1]
+                    NS             2             2             =             2 
+     8 RespectCommande[D1,F2]
+                    B              0            -0             = 
+     9 RespectCommande[D2,F1]
+                    NS             1             1             =             2 
+    10 RespectCommande[D2,F2]
+                    NS             3             3             =             3 
+    11 CoutTotal    B            9.5                             
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 x[D1,F1,M1]  B              2             0               
+     2 x[D2,F1,M1]  B            0.5             0               
+     3 x[D1,F2,M1]  NL             0             0                           3 
+     4 x[D2,F2,M1]  B              1             0               
+     5 x[D1,F1,M2]  NL             0             0                       < eps
+     6 x[D2,F1,M2]  B            0.5             0               
+     7 x[D1,F2,M2]  NL             0             0                           3 
+     8 x[D2,F2,M2]  B              1             0               
+     9 x[D1,F1,M3]  NL             0             0                           1 
+    10 x[D2,F1,M3]  NL             0             0                           1 
+    11 x[D1,F2,M3]  NL             0             0                           3 
+    12 x[D2,F2,M3]  B              1             0               
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 0.00e+00 on column 0
+        max.rel.err = 0.00e+00 on column 0
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

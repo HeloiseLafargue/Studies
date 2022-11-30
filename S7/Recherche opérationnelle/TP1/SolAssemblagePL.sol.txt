@@ -1,0 +1,40 @@
+Problem:    
+Rows:       3
+Columns:    2
+Non-zeros:  5
+Status:     OPTIMAL
+Objective:  MargeTotale = 10285714.29 (MAXimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 TempsDeTravail
+                    NU          6000                        6000       1571.43 
+     2 LimiteVoituresL
+                    B        642.857                         800 
+     3 SurfaceParking
+                    NU         15000                       15000       57.1429 
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 L            B        642.857             0               
+     2 S            B        428.571             0               
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 1.82e-12 on column 1
+        max.rel.err = 9.09e-17 on column 1
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

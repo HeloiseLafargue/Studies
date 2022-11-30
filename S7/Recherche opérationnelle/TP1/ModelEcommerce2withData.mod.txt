@@ -1,0 +1,72 @@
+###############################  Model ###############################
+
+
+
+###############################  Sets  ###############################
+
+set DEMANDES;
+
+set PRODUITS; 
+
+set MAGASINS;	
+
+################### Variables ###################
+
+var x{d in DEMANDES, p in PRODUITS, m in MAGASINS}, >=0, integer; 
+
+###################  Constants: Data to load   #########################
+
+param commandes{d in DEMANDES, p in PRODUITS};
+
+param stocks{m in MAGASINS, p in PRODUITS}; 
+
+param couts{m in MAGASINS, p in PRODUITS}; 
+
+################### Constraints ###################
+
+
+s.t. RespectStock{m in MAGASINS, p in PRODUITS}:
+  sum{d in DEMANDES} x[d,p,m] <= stocks[m,p];
+  
+  RespectCommande{d in DEMANDES, p in PRODUITS}:
+  sum {m in MAGASINS} x[d,p,m] = commandes[d,p];
+
+
+###### Objective ######
+
+minimize CoutTotal: 
+		sum{m in MAGASINS} (sum{p in PRODUITS} couts[m,p] * (sum{d in DEMANDES} x[d,p,m])); 
+
+
+#default data
+
+data;
+
+set DEMANDES := 
+D1
+D2;
+
+set PRODUITS :=
+Burger_Classique
+Burger_Savoyard;
+
+set MAGASINS :=
+M1
+M2
+M3;
+
+param commandes: Burger_Classique Burger_Savoyard :=
+D1 2 0
+D2 1 3;
+
+param stocks: Burger_Classique Burger_Savoyard :=
+M1 2.5 2.5
+M2 1 2
+M3 2 1;
+
+param couts: Burger_Classique Burger_Savoyard :=
+M1 1 1
+M2 2 3
+M3 3 2;
+
+end;

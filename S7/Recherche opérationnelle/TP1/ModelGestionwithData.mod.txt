@@ -1,0 +1,53 @@
+###############################  Model ###############################
+
+
+###############################  Sets  ###############################
+
+set PERSONNES; 
+
+set TRAVAUX;	
+
+################### Variables ###################
+
+var x{i in PERSONNES, j in TRAVAUX}, binary; 
+
+###################  Constants: Data to load   #########################
+
+param cout{i in PERSONNES, j in TRAVAUX}; 
+
+################### Constraints ###################
+
+
+s.t. UnSeulTravailParPersonne{i in PERSONNES}:
+  sum{j in TRAVAUX} x[i,j] = 1;
+  
+s.t. UneSeulePersonneParTravail{j in TRAVAUX}:
+  sum{i in PERSONNES} x[i,j] = 1;
+
+
+###### Objective ######
+
+minimize CoutTotalFormation: 
+		sum{i in PERSONNES} (sum{j in TRAVAUX} x[i,j]* cout[i,j]); 
+
+
+#default data
+
+data;
+
+set PERSONNES := 
+Leo
+Heloise
+Tanguy;
+
+set TRAVAUX :=
+Maths
+Marketing
+Coiffure;
+
+param cout: Maths Marketing Coiffure :=
+Leo 1 2 3
+Heloise 4 5 6
+Tanguy 7 8 9;
+
+end;
