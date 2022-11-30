@@ -1,0 +1,49 @@
+V "GNAT Lib v10"
+P ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV SPARK_05
+
+U lr.synchro%b		lr-synchro.adb		ae288a98 NE OO PK IU
+W lr%s			lr.ads			lr.ali
+W lr.synchro%s		lr-synchro.adb		lr-synchro.ali
+W lr.synchro.basique%s	lr-synchro-basique.adb	lr-synchro-basique.ali
+W lr.synchro.exclusion%s  lr-synchro-exclusion.adb  lr-synchro-exclusion.ali
+
+U lr.synchro%s		lr-synchro.ads		6f87cbb4 EE NE OO PK IU
+W lr%s			lr.ads			lr.ali
+
+D lr.ads		20191107081045 400998c9 lr%s
+D lr-synchro.ads	20191107081045 2f8e537d lr.synchro%s
+D lr-synchro.adb	20221107152934 0ac9bc79 lr.synchro%b
+D lr-synchro-basique.ads  20191107081045 b74fcab8 lr.synchro.basique%s
+D lr-synchro-exclusion.ads  20221107152722 3c20af24 lr.synchro.exclusion%s
+D system.ads		20220628085427 4635ec04 system%s
+G a e
+G c Z s b [nom_strategie lr__synchro 5 13 none]
+G c Z s b [demander_lecture lr__synchro 7 14 none]
+G c Z s b [demander_ecriture lr__synchro 8 14 none]
+G c Z s b [terminer_lecture lr__synchro 9 14 none]
+G c Z s b [terminer_ecriture lr__synchro 10 14 none]
+X 1 lr.ads
+3K9*LR 4e7 2|3r9 12r5 3|3r6 4r6 7r14 9r28 21r5
+X 2 lr-synchro.ads
+3K12*Synchro 1|3k9 2|12l8 12e15 3|3r9 4r9 7b17 9r31 21l8 21t15
+5V13*Nom_Strategie{string} 3|11b13
+7U14*Demander_Lecture 3|13b14
+8U14*Demander_Ecriture 3|15b14
+9U14*Terminer_Lecture 3|17b14
+10U14*Terminer_Ecriture 3|19b14
+X 3 lr-synchro.adb
+9K12 Synchro=9:39 11r49 13r39 15r40 17r39 19r40
+X 4 lr-synchro-basique.ads
+3K20*Basique 3|3w17 4|12e23
+X 5 lr-synchro-exclusion.ads
+1K20*Exclusion 3|4w17 9r39 5|10e25
+3V13*Nom_Strategie{string} 3|11r57
+5U14*Demander_Lecture 3|13r47
+6U14*Demander_Ecriture 3|15r48
+7U14*Terminer_Lecture 3|17r47
+8U14*Terminer_Ecriture 3|19r48
+

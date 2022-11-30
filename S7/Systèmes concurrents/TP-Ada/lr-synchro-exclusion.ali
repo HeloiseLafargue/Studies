@@ -1,0 +1,119 @@
+V "GNAT Lib v10"
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_SELECT_STATEMENTS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV NO_TERMINATE_ALTERNATIVES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_SELECT_ALTERNATIVES=3
+RV MAX_TASK_ENTRIES=4
+RV MAX_TASKS=1
+
+U lr.synchro.exclusion%b  lr-synchro-exclusion.adb  27316c1b OO PK IU
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W lr.synchro%s		lr-synchro.adb		lr-synchro.ali
+Z system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U lr.synchro.exclusion%s  lr-synchro-exclusion.ads  13aefc59 EE NE OO PK IU
+W lr.synchro%s		lr-synchro.adb		lr-synchro.ali
+
+D ada.ads		20220628085427 76789da1 ada%s
+D a-except.ads		20220628085427 a7106115 ada.exceptions%s
+D a-finali.ads		20220628085427 bf4f806b ada.finalization%s
+D a-ioexce.ads		20220628085427 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20220628085427 0240fc73 ada.real_time%s
+D a-stream.ads		20220628085427 119b8fb3 ada.streams%s
+D a-tags.ads		20220628085427 491b781d ada.tags%s
+D a-textio.ads		20220628085427 aef4d56d ada.text_io%s
+D a-unccon.ads		20220628085427 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20220628085427 5ab55268 interfaces%s
+D i-c.ads		20220628085427 5421119b interfaces.c%s
+D i-cstrea.ads		20220628085427 e53d8b8e interfaces.c_streams%s
+D lr.ads		20191107081045 400998c9 lr%s
+D lr-synchro.ads	20191107081045 2f8e537d lr.synchro%s
+D lr-synchro-exclusion.ads  20221107152722 3c20af24 lr.synchro.exclusion%s
+D lr-synchro-exclusion.adb  20221107152712 12f57747 lr.synchro.exclusion%b
+D system.ads		20220628085427 4635ec04 system%s
+D s-atacco.ads		20220628085427 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20220628085427 0ebbdb71 system.crtl%s
+D s-exctab.ads		20220628085427 54135002 system.exception_table%s
+D s-ficobl.ads		20220628085427 078245e4 system.file_control_block%s
+D s-finroo.ads		20220628085427 4ff27390 system.finalization_root%s
+D s-linux.ads		20220628085427 ed0b8aee system.linux%s
+D s-multip.ads		20220628085427 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20220719104018 56602da1 system.os_constants%s
+D s-osinte.ads		20220719104018 baabc537 system.os_interface%s
+D s-parame.ads		20220628085427 48ec542b system.parameters%s
+D s-secsta.ads		20220628085427 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20220628085427 a7318a92 system.soft_links%s
+D s-stache.ads		20220628085427 a37c21ec system.stack_checking%s
+D s-stausa.ads		20220628085427 017a0a05 system.stack_usage%s
+D s-stalib.ads		20220628085427 09bd3940 system.standard_library%s
+D s-stoele.ads		20220628085427 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20220628085427 2b3f8252 system.task_info%s
+D s-taspri.ads		20220628085427 f40ac08d system.task_primitives%s
+D s-taprop.ads		20220628085427 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20220628085427 b9d612e2 system.tasking%s
+D s-taprob.ads		20220628085427 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20220628085427 60ad3dae system.tasking.protected_objects.entries%s
+D s-tasren.ads		20220628085427 a67a9949 system.tasking.rendezvous%s
+D s-tassta.ads		20220628085427 cca55c94 system.tasking.stages%s
+D s-traent.ads		20220628085427 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20220628085427 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20220628085427 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [nom_strategie lr__synchro__exclusion 3 13 none]
+G c Z s b [demander_lecture lr__synchro__exclusion 5 14 none]
+G c Z s b [demander_ecriture lr__synchro__exclusion 6 14 none]
+G c Z s b [terminer_lecture lr__synchro__exclusion 7 14 none]
+G c Z s b [terminer_ecriture lr__synchro__exclusion 8 14 none]
+G c Z b b [lectredtaskTK lr__synchro__exclusion 14 9 none]
+G c Z b b [demander_lecture lr__synchro__exclusion__lectredtask 15 13 none]
+G c Z b b [demander_ecriture lr__synchro__exclusion__lectredtask 16 13 none]
+G c Z b b [terminer_lecture lr__synchro__exclusion__lectredtask 17 13 none]
+G c Z b b [terminer_ecriture lr__synchro__exclusion__lectredtask 18 13 none]
+G c Z b b [lectredtaskTKVIP lr__synchro__exclusion 14 4 none]
+X 1 ada.ads
+16K9*Ada 20e8 16|1r6 1r23 2r6
+X 2 a-except.ads
+48K13*Exceptions 335e19 16|2w10
+X 8 a-textio.ads
+57K13*Text_IO 727e16 16|1w10 1r27
+X 13 lr.ads
+3K9*LR 4e7 15|1r9 10r5 16|7r14 57r5
+X 14 lr-synchro.ads
+3K12*Synchro 13|3k9 14|12e15 15|1r12 10r8 16|7r17 57r8
+X 15 lr-synchro-exclusion.ads
+1K20*Exclusion 14|3k12 15|10l16 10e25 16|7b25 57l16 57t25
+3V13*Nom_Strategie{string} 16|9b13 12l8 12t21
+5U14*Demander_Lecture 16|37b14 40l8 40t24
+6U14*Demander_Ecriture 16|42b14 45l8 45t25
+7U14*Terminer_Lecture 16|47b14 50l8 50t24
+8U14*Terminer_Ecriture 16|52b14 55l8 55t25
+X 16 lr-synchro-exclusion.adb
+14t9 LectRedTask 21b14 35l8 35t19 39r7 44r7 49r7 54r7
+15Y13 Demander_Lecture 26b20 39s19
+16Y13 Demander_Ecriture 29b20 44s19
+17Y13 Terminer_Lecture 27b20 49s19
+18Y13 Terminer_Ecriture 30b20 54s19
+X 31 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+
