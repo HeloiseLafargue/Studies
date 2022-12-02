@@ -1,0 +1,12 @@
+begin
+on;
+turn 180;
+move 100;
+repeat 4 begin
+on;
+move 100;
+off;
+move 50;
+turn 90;
+end;
+end

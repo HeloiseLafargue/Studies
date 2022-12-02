@@ -1,0 +1,2 @@
+(** @canonical Tp10_etu.Monadic_flux *)
+module Monadic_flux = Tp10_etu__Monadic_flux
