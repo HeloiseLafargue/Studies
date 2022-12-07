@@ -1,0 +1,79 @@
+Date de l'évaluation : mar. 05 avril 2022 09:34:48 CEST
+
+Nombre de similitudes (voir evaluations/penalites2/sim_java.txt) : 5
+Les similitudes indiquent généralement du code à restructurer.
+
+Erreurs checkstyle (différentes/types) : 0/0	(voir evaluations/penalites2//checkstyle.log)
+
+Classe OperationInterditeException : OperationInterditeException (ok)
+
+Procuration sur le jeu réel : allumettes/JeuProxy.java (ok)
+
+OperationInterditeException, levée dans : allumettes/JeuProxy.java (ok)
+OperationInterditeException, récupérée dans : allumettes/Arbitre.java (ok)
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ok
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:71:                 } catch (TricheException e) {
+  | allumettes/Arbitre.java:76:                     } catch (CoupInvalideException exc) {
+  | allumettes/Arbitre.java:78:                 } catch (NoSuchElementException e) {
+  | allumettes/Arbitre.java:80:                 } catch (IllegalStateException e) {
+  | allumettes/Arbitre.java:94:         } catch (CoupInvalideException e) {
+  | allumettes/Jouer.java:32:       } catch (ConfigurationException e) {
+  | allumettes/Humain.java:37:          } catch (NumberFormatException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/Humain.java:15:  private static Scanner scanner;
+  | allumettes/Humain.java:18:      this.scanner = new Scanner(System.in);
+
+Utilisation de 'split' : ok
+  | allumettes/Jouer.java:88:       String[] arg = chaine.split("@");
+
+Utilisation de 'Random' : ok
+  | allumettes/Expert.java:2:import java.util.Random;
+  | allumettes/Expert.java:19:      Random random = new Random();
+  | allumettes/Naif.java:2:import java.util.Random;
+  | allumettes/Naif.java:17:        Random random = new Random();
+
+Utilisation de '3' : ok
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Compilation de TestRapide.java : OK.
+Test exemplePresqueSujet : ok
+Test exempleTricheurSujet : ok
+Test exempleConfiantTricheurSujet : ok
+Test exempleRobustesse : ok
+Test exempleHumainTricheurExpert : ok
+Test exempleMaxLou : ok
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : ok
+Test exempleExpertTest : ok
+Test exempleExpertTest2 : ok
+Test exempleExpertTest3 : ok
+Test exempleExpertTest4 : ok
+Test exempleRapideTest : ok
+Test exempleRapideTest1 : ok
+Test exempleRapideTest2 : ok
+Test exempleRapideTest3 : ok
+
+Test RobustesseTest : OK (25 tests)	(voir evaluations/penalites2/RobustesseTest.log)
+
+On recommence avec les classes/interfaces fournies : Jeu ConfigurationException CoupInvalideException
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+
+Vérification du respect du diagramme de classe...
+Test FormeTest : OK (2 tests)	(voir evaluations/penalites2/FormeTest.log)
+
+Compilation de TestRapide.java : OK.
+Test allumettes.TestRapide : OK (2 tests)	(voir evaluations/penalites2/allumettes.TestRapide.log)
+
+Total pénalités : 0

@@ -1,0 +1,13 @@
+Les Q# font référence aux questions posées dans le fichier LISEZ-MOI.txt.
+Les pénalités '+' sont évaluées manuellement (enseignant de TP).
+Les pénalités '+' peuvent donner lieu à des pénalités définitives en V1 (si le travail est jugé insuffisant).
+
+
++ L3 : Fichier LISEZ-MOI.txt : 1 pt
+    + Question 1 : 0.5 pt
+    + Question 2 : 0.5 pt
+
+
++ Total pénalités : 1
++ Correction sur les pénalités automatiques : 0
+

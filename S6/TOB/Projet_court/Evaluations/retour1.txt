@@ -1,0 +1,20 @@
+Les Q# font référence aux questions posées dans le fichier LISEZ-MOI.txt.
+Les pénalités '+' sont évaluées manuellement (enseignant de TP).
+Les pénalités '+' peuvent donner lieu à des pénalités définitives en V1 (si le travail est jugé insuffisant).
+
++ C3 : Qualité du source de l'application
+    + structuration/commentaires (en particulier pour traitement des arguments de la ligne de commande)
+    + redondance (en particulier pour traitement des arguments de la ligne de commande)
++ C13 : L'arbitre ne doit ni utiliser directement, ni tester la stratégie d'un joueur (instanceof, equals, etc)
++ C16 : Tests unitaires de la stratégie rapide
+	+ non complets
+
++ Mauvaise mise en oeuvre du Proxy
+    + mauvaise implantation : il ne faut pas appeler arbitrer sur le proxy dans le cas non confiant, c'est à l'intérieur de arbitrer qu'il faut créer un proxy lorsque nécessaire
+
++ L3 : Fichier LISEZ-MOI.txt
+    + Question 1 : imprécis/incomplet
+    + Question 2 : incomplet (quelles modifs à faire dans Jouer ?)
+
++ Correction sur les pénalités automatiques : 0
+
