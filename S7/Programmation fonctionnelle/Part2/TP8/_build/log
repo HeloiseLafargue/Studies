@@ -1,0 +1,472 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP8"
+# Auto-detected concurrency: 2
+$ /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -config > /tmp/dune_6aed25_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/ubuntu/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/home/ubuntu/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/home/ubuntu/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/ubuntu/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP8"
+#        ; "INSIDE_DUNE" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP8/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP8/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP8/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP8/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/ubuntu/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/.sandbox/2e388ee9599eeaf7b1f39bd6c4bc547b/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp8_etu"' -o tp8_etu.pp.ml --impl tp8_etu.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I .tp8_etu.objs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -no-alias-deps -opaque -o .tp8_etu.objs/byte/tp8_etu.cmo -c -impl tp8_etu.pp.ml)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -w -24 -g -g -bin-annot -I .tp8_etu.inline-tests/.tp8_etu.inline-tests.eobjs/byte -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runner/lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -I .tp8_etu.objs/byte -no-alias-deps -o .tp8_etu.inline-tests/.tp8_etu.inline-tests.eobjs/byte/dune__exe__Inline_test_runner_tp8_etu.cmo -c -impl .tp8_etu.inline-tests/inline_test_runner_tp8_etu.ml-gen)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I .tp8_etu.objs/byte -I .tp8_etu.objs/native -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -intf-suffix .ml -no-alias-deps -opaque -o .tp8_etu.objs/native/tp8_etu.cmx -c -impl tp8_etu.pp.ml)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -w -24 -g -g -I .tp8_etu.inline-tests/.tp8_etu.inline-tests.eobjs/byte -I .tp8_etu.inline-tests/.tp8_etu.inline-tests.eobjs/native -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/jane-street-headers -I /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runner/lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/time_now -I .tp8_etu.objs/byte -I .tp8_etu.objs/native -intf-suffix .ml-gen -no-alias-deps -o .tp8_etu.inline-tests/.tp8_etu.inline-tests.eobjs/native/dune__exe__Inline_test_runner_tp8_etu.cmx -c -impl .tp8_etu.inline-tests/inline_test_runner_tp8_etu.ml-gen)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -a -o tp8_etu.cmxa .tp8_etu.objs/native/tp8_etu.cmx)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -w -24 -g -g -o .tp8_etu.inline-tests/inline_test_runner_tp8_etu.exe /home/ubuntu/.opam/4.12.0/lib/ocaml/unix.cmxa -I /home/ubuntu/.opam/4.12.0/lib/ocaml /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/config/inline_test_config.cmxa /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types /home/ubuntu/.opam/4.12.0/lib/base/caml/caml.cmxa /home/ubuntu/.opam/4.12.0/lib/sexplib0/sexplib0.cmxa /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/ubuntu/.opam/4.12.0/lib/base/base.cmxa -I /home/ubuntu/.opam/4.12.0/lib/base /home/ubuntu/.opam/4.12.0/lib/jane-street-headers/jane_street_headers.cmxa /home/ubuntu/.opam/4.12.0/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/ubuntu/.opam/4.12.0/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /home/ubuntu/.opam/4.12.0/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /home/ubuntu/.opam/4.12.0/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /home/ubuntu/.opam/4.12.0/lib/time_now/time_now.cmxa -I /home/ubuntu/.opam/4.12.0/lib/time_now /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa tp8_etu.cmxa /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runner/lib/ppx_inline_test_runner_lib.cmxa -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/runner/lib .tp8_etu.inline-tests/.tp8_etu.inline-tests.eobjs/native/dune__exe__Inline_test_runner_tp8_etu.cmx -linkall)
+$ (cd _build/default && .tp8_etu.inline-tests/inline_test_runner_tp8_etu.exe inline-test-runner tp8_etu -source-tree-root . -diff-cmd -)
+>
+> TEST combinaisons
+> memory used: 125480.000000
+> result:
+>  [7; 8; 9; 10; ]
+> [6; 8; 9; 10; ]
+> [6; 7; 9; 10; ]
+> [6; 7; 8; 10; ]
+> [6; 7; 8; 9; ]
+> [5; 8; 9; 10; ]
+> [5; 7; 9; 10; ]
+> [5; 7; 8; 10; ]
+> [5; 7; 8; 9; ]
+> [5; 6; 9; 10; ]
+> [5; 6; 8; 10; ]
+> [5; 6; 8; 9; ]
+> [5; 6; 7; 10; ]
+> [5; 6; 7; 9; ]
+> [5; 6; 7; 8; ]
+> [4; 8; 9; 10; ]
+> [4; 7; 9; 10; ]
+> [4; 7; 8; 10; ]
+> [4; 7; 8; 9; ]
+> [4; 6; 9; 10; ]
+> [4; 6; 8; 10; ]
+> [4; 6; 8; 9; ]
+> [4; 6; 7; 10; ]
+> [4; 6; 7; 9; ]
+> [4; 6; 7; 8; ]
+> [4; 5; 9; 10; ]
+> [4; 5; 8; 10; ]
+> [4; 5; 8; 9; ]
+> [4; 5; 7; 10; ]
+> [4; 5; 7; 9; ]
+> [4; 5; 7; 8; ]
+> [4; 5; 6; 10; ]
+> [4; 5; 6; 9; ]
+> [4; 5; 6; 8; ]
+> [4; 5; 6; 7; ]
+> [3; 8; 9; 10; ]
+> [3; 7; 9; 10; ]
+> [3; 7; 8; 10; ]
+> [3; 7; 8; 9; ]
+> [3; 6; 9; 10; ]
+> [3; 6; 8; 10; ]
+> [3; 6; 8; 9; ]
+> [3; 6; 7; 10; ]
+> [3; 6; 7; 9; ]
+> [3; 6; 7; 8; ]
+> [3; 5; 9; 10; ]
+> [3; 5; 8; 10; ]
+> [3; 5; 8; 9; ]
+> [3; 5; 7; 10; ]
+> [3; 5; 7; 9; ]
+> [3; 5; 7; 8; ]
+> [3; 5; 6; 10; ]
+> [3; 5; 6; 9; ]
+> [3; 5; 6; 8; ]
+> [3; 5; 6; 7; ]
+> [3; 4; 9; 10; ]
+> [3; 4; 8; 10; ]
+> [3; 4; 8; 9; ]
+> [3; 4; 7; 10; ]
+> [3; 4; 7; 9; ]
+> [3; 4; 7; 8; ]
+> [3; 4; 6; 10; ]
+> [3; 4; 6; 9; ]
+> [3; 4; 6; 8; ]
+> [3; 4; 6; 7; ]
+> [3; 4; 5; 10; ]
+> [3; 4; 5; 9; ]
+> [3; 4; 5; 8; ]
+> [3; 4; 5; 7; ]
+> [3; 4; 5; 6; ]
+> [2; 8; 9; 10; ]
+> [2; 7; 9; 10; ]
+> [2; 7; 8; 10; ]
+> [2; 7; 8; 9; ]
+> [2; 6; 9; 10; ]
+> [2; 6; 8; 10; ]
+> [2; 6; 8; 9; ]
+> [2; 6; 7; 10; ]
+> [2; 6; 7; 9; ]
+> [2; 6; 7; 8; ]
+> [2; 5; 9; 10; ]
+> [2; 5; 8; 10; ]
+> [2; 5; 8; 9; ]
+> [2; 5; 7; 10; ]
+> [2; 5; 7; 9; ]
+> [2; 5; 7; 8; ]
+> [2; 5; 6; 10; ]
+> [2; 5; 6; 9; ]
+> [2; 5; 6; 8; ]
+> [2; 5; 6; 7; ]
+> [2; 4; 9; 10; ]
+> [2; 4; 8; 10; ]
+> [2; 4; 8; 9; ]
+> [2; 4; 7; 10; ]
+> [2; 4; 7; 9; ]
+> [2; 4; 7; 8; ]
+> [2; 4; 6; 10; ]
+> [2; 4; 6; 9; ]
+> [2; 4; 6; 8; ]
+> [2; 4; 6; 7; ]
+> [2; 4; 5; 10; ]
+> [2; 4; 5; 9; ]
+> [2; 4; 5; 8; ]
+> [2; 4; 5; 7; ]
+> [2; 4; 5; 6; ]
+> [2; 3; 9; 10; ]
+> [2; 3; 8; 10; ]
+> [2; 3; 8; 9; ]
+> [2; 3; 7; 10; ]
+> [2; 3; 7; 9; ]
+> [2; 3; 7; 8; ]
+> [2; 3; 6; 10; ]
+> [2; 3; 6; 9; ]
+> [2; 3; 6; 8; ]
+> [2; 3; 6; 7; ]
+> [2; 3; 5; 10; ]
+> [2; 3; 5; 9; ]
+> [2; 3; 5; 8; ]
+> [2; 3; 5; 7; ]
+> [2; 3; 5; 6; ]
+> [2; 3; 4; 10; ]
+> [2; 3; 4; 9; ]
+> [2; 3; 4; 8; ]
+> [2; 3; 4; 7; ]
+> [2; 3; 4; 6; ]
+> [2; 3; 4; 5; ]
+> [1; 8; 9; 10; ]
+> [1; 7; 9; 10; ]
+> [1; 7; 8; 10; ]
+> [1; 7; 8; 9; ]
+> [1; 6; 9; 10; ]
+> [1; 6; 8; 10; ]
+> [1; 6; 8; 9; ]
+> [1; 6; 7; 10; ]
+> [1; 6; 7; 9; ]
+> [1; 6; 7; 8; ]
+> [1; 5; 9; 10; ]
+> [1; 5; 8; 10; ]
+> [1; 5; 8; 9; ]
+> [1; 5; 7; 10; ]
+> [1; 5; 7; 9; ]
+> [1; 5; 7; 8; ]
+> [1; 5; 6; 10; ]
+> [1; 5; 6; 9; ]
+> [1; 5; 6; 8; ]
+> [1; 5; 6; 7; ]
+> [1; 4; 9; 10; ]
+> [1; 4; 8; 10; ]
+> [1; 4; 8; 9; ]
+> [1; 4; 7; 10; ]
+> [1; 4; 7; 9; ]
+> [1; 4; 7; 8; ]
+> [1; 4; 6; 10; ]
+> [1; 4; 6; 9; ]
+> [1; 4; 6; 8; ]
+> [1; 4; 6; 7; ]
+> [1; 4; 5; 10; ]
+> [1; 4; 5; 9; ]
+> [1; 4; 5; 8; ]
+> [1; 4; 5; 7; ]
+> [1; 4; 5; 6; ]
+> [1; 3; 9; 10; ]
+> [1; 3; 8; 10; ]
+> [1; 3; 8; 9; ]
+> [1; 3; 7; 10; ]
+> [1; 3; 7; 9; ]
+> [1; 3; 7; 8; ]
+> [1; 3; 6; 10; ]
+> [1; 3; 6; 9; ]
+> [1; 3; 6; 8; ]
+> [1; 3; 6; 7; ]
+> [1; 3; 5; 10; ]
+> [1; 3; 5; 9; ]
+> [1; 3; 5; 8; ]
+> [1; 3; 5; 7; ]
+> [1; 3; 5; 6; ]
+> [1; 3; 4; 10; ]
+> [1; 3; 4; 9; ]
+> [1; 3; 4; 8; ]
+> [1; 3; 4; 7; ]
+> [1; 3; 4; 6; ]
+> [1; 3; 4; 5; ]
+> [1; 2; 9; 10; ]
+> [1; 2; 8; 10; ]
+> [1; 2; 8; 9; ]
+> [1; 2; 7; 10; ]
+> [1; 2; 7; 9; ]
+> [1; 2; 7; 8; ]
+> [1; 2; 6; 10; ]
+> [1; 2; 6; 9; ]
+> [1; 2; 6; 8; ]
+> [1; 2; 6; 7; ]
+> [1; 2; 5; 10; ]
+> [1; 2; 5; 9; ]
+> [1; 2; 5; 8; ]
+> [1; 2; 5; 7; ]
+> [1; 2; 5; 6; ]
+> [1; 2; 4; 10; ]
+> [1; 2; 4; 9; ]
+> [1; 2; 4; 8; ]
+> [1; 2; 4; 7; ]
+> [1; 2; 4; 6; ]
+> [1; 2; 4; 5; ]
+> [1; 2; 3; 10; ]
+> [1; 2; 3; 9; ]
+> [1; 2; 3; 8; ]
+> [1; 2; 3; 7; ]
+> [1; 2; 3; 6; ]
+> [1; 2; 3; 5; ]
+> [1; 2; 3; 4; ]
+>
+>
+> TEST permutations
+> memory used: 47048.000000
+> result:
+>  [1; 2; 3; 4; 5; ]
+> [2; 1; 3; 4; 5; ]
+> [2; 3; 1; 4; 5; ]
+> [2; 3; 4; 1; 5; ]
+> [2; 3; 4; 5; 1; ]
+> [1; 3; 2; 4; 5; ]
+> [3; 1; 2; 4; 5; ]
+> [3; 2; 1; 4; 5; ]
+> [3; 2; 4; 1; 5; ]
+> [3; 2; 4; 5; 1; ]
+> [1; 3; 4; 2; 5; ]
+> [3; 1; 4; 2; 5; ]
+> [3; 4; 1; 2; 5; ]
+> [3; 4; 2; 1; 5; ]
+> [3; 4; 2; 5; 1; ]
+> [1; 3; 4; 5; 2; ]
+> [3; 1; 4; 5; 2; ]
+> [3; 4; 1; 5; 2; ]
+> [3; 4; 5; 1; 2; ]
+> [3; 4; 5; 2; 1; ]
+> [1; 2; 4; 3; 5; ]
+> [2; 1; 4; 3; 5; ]
+> [2; 4; 1; 3; 5; ]
+> [2; 4; 3; 1; 5; ]
+> [2; 4; 3; 5; 1; ]
+> [1; 4; 2; 3; 5; ]
+> [4; 1; 2; 3; 5; ]
+> [4; 2; 1; 3; 5; ]
+> [4; 2; 3; 1; 5; ]
+> [4; 2; 3; 5; 1; ]
+> [1; 4; 3; 2; 5; ]
+> [4; 1; 3; 2; 5; ]
+> [4; 3; 1; 2; 5; ]
+> [4; 3; 2; 1; 5; ]
+> [4; 3; 2; 5; 1; ]
+> [1; 4; 3; 5; 2; ]
+> [4; 1; 3; 5; 2; ]
+> [4; 3; 1; 5; 2; ]
+> [4; 3; 5; 1; 2; ]
+> [4; 3; 5; 2; 1; ]
+> [1; 2; 4; 5; 3; ]
+> [2; 1; 4; 5; 3; ]
+> [2; 4; 1; 5; 3; ]
+> [2; 4; 5; 1; 3; ]
+> [2; 4; 5; 3; 1; ]
+> [1; 4; 2; 5; 3; ]
+> [4; 1; 2; 5; 3; ]
+> [4; 2; 1; 5; 3; ]
+> [4; 2; 5; 1; 3; ]
+> [4; 2; 5; 3; 1; ]
+> [1; 4; 5; 2; 3; ]
+> [4; 1; 5; 2; 3; ]
+> [4; 5; 1; 2; 3; ]
+> [4; 5; 2; 1; 3; ]
+> [4; 5; 2; 3; 1; ]
+> [1; 4; 5; 3; 2; ]
+> [4; 1; 5; 3; 2; ]
+> [4; 5; 1; 3; 2; ]
+> [4; 5; 3; 1; 2; ]
+> [4; 5; 3; 2; 1; ]
+> [1; 2; 3; 5; 4; ]
+> [2; 1; 3; 5; 4; ]
+> [2; 3; 1; 5; 4; ]
+> [2; 3; 5; 1; 4; ]
+> [2; 3; 5; 4; 1; ]
+> [1; 3; 2; 5; 4; ]
+> [3; 1; 2; 5; 4; ]
+> [3; 2; 1; 5; 4; ]
+> [3; 2; 5; 1; 4; ]
+> [3; 2; 5; 4; 1; ]
+> [1; 3; 5; 2; 4; ]
+> [3; 1; 5; 2; 4; ]
+> [3; 5; 1; 2; 4; ]
+> [3; 5; 2; 1; 4; ]
+> [3; 5; 2; 4; 1; ]
+> [1; 3; 5; 4; 2; ]
+> [3; 1; 5; 4; 2; ]
+> [3; 5; 1; 4; 2; ]
+> [3; 5; 4; 1; 2; ]
+> [3; 5; 4; 2; 1; ]
+> [1; 2; 5; 3; 4; ]
+> [2; 1; 5; 3; 4; ]
+> [2; 5; 1; 3; 4; ]
+> [2; 5; 3; 1; 4; ]
+> [2; 5; 3; 4; 1; ]
+> [1; 5; 2; 3; 4; ]
+> [5; 1; 2; 3; 4; ]
+> [5; 2; 1; 3; 4; ]
+> [5; 2; 3; 1; 4; ]
+> [5; 2; 3; 4; 1; ]
+> [1; 5; 3; 2; 4; ]
+> [5; 1; 3; 2; 4; ]
+> [5; 3; 1; 2; 4; ]
+> [5; 3; 2; 1; 4; ]
+> [5; 3; 2; 4; 1; ]
+> [1; 5; 3; 4; 2; ]
+> [5; 1; 3; 4; 2; ]
+> [5; 3; 1; 4; 2; ]
+> [5; 3; 4; 1; 2; ]
+> [5; 3; 4; 2; 1; ]
+> [1; 2; 5; 4; 3; ]
+> [2; 1; 5; 4; 3; ]
+> [2; 5; 1; 4; 3; ]
+> [2; 5; 4; 1; 3; ]
+> [2; 5; 4; 3; 1; ]
+> [1; 5; 2; 4; 3; ]
+> [5; 1; 2; 4; 3; ]
+> [5; 2; 1; 4; 3; ]
+> [5; 2; 4; 1; 3; ]
+> [5; 2; 4; 3; 1; ]
+> [1; 5; 4; 2; 3; ]
+> [5; 1; 4; 2; 3; ]
+> [5; 4; 1; 2; 3; ]
+> [5; 4; 2; 1; 3; ]
+> [5; 4; 2; 3; 1; ]
+> [1; 5; 4; 3; 2; ]
+> [5; 1; 4; 3; 2; ]
+> [5; 4; 1; 3; 2; ]
+> [5; 4; 3; 1; 2; ]
+> [5; 4; 3; 2; 1; ]
+>
+>
+> TEST partitions
+> memory used: 2584.000000
+> result: [1; 1; 1; 1; 1; ]
+> [1; 1; 1; 2; ]
+> [1; 1; 3; ]
+> [1; 2; 2; ]
+> [1; 4; ]
+> [2; 3; ]
+> [5; ]
+>

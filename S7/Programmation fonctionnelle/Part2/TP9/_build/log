@@ -1,0 +1,126 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP9"
+# Auto-detected concurrency: 2
+$ /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -config > /tmp/dune_1bf4b2_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/ubuntu/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/home/ubuntu/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/home/ubuntu/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/ubuntu/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/ubuntu/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP9"
+#        ; "INSIDE_DUNE" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP9/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP9/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP9/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/ubuntu/Desktop/Programmation fonctionnelle/Part2/TP9/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/ubuntu/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/home/ubuntu/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlc.opt -g -w -24 -I .ppx/bfcab61e6a21ecf6d2f80029fc1ef484 -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/ocaml-compiler-libs/common -I /home/ubuntu/.opam/4.12.0/lib/ocaml-compiler-libs/shadow -I /home/ubuntu/.opam/4.12.0/lib/ocaml/compiler-libs -I /home/ubuntu/.opam/4.12.0/lib/ppx_derivers -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/libname -I /home/ubuntu/.opam/4.12.0/lib/ppxlib -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/ast -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/astlib -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/print_diff -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/stdppx -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/traverse_builtins -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/stdlib-shims -no-alias-deps -o .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/dune__exe___ppx.cmo -c -impl .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/_ppx.ml-gen)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt -g -w -24 -I .ppx/bfcab61e6a21ecf6d2f80029fc1ef484 -I /home/ubuntu/.opam/4.12.0/lib/base -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types -I /home/ubuntu/.opam/4.12.0/lib/base/caml -I /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib -I /home/ubuntu/.opam/4.12.0/lib/ocaml-compiler-libs/common -I /home/ubuntu/.opam/4.12.0/lib/ocaml-compiler-libs/shadow -I /home/ubuntu/.opam/4.12.0/lib/ocaml/compiler-libs -I /home/ubuntu/.opam/4.12.0/lib/ppx_derivers -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test -I /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/libname -I /home/ubuntu/.opam/4.12.0/lib/ppxlib -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/ast -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/astlib -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/print_diff -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/stdppx -I /home/ubuntu/.opam/4.12.0/lib/ppxlib/traverse_builtins -I /home/ubuntu/.opam/4.12.0/lib/sexplib0 -I /home/ubuntu/.opam/4.12.0/lib/stdlib-shims -intf-suffix .ml-gen -no-alias-deps -o .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/dune__exe___ppx.cmx -c -impl .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/_ppx.ml-gen)
+$ (cd _build/default && /home/ubuntu/.opam/4.12.0/bin/ocamlopt.opt -g -w -24 -o .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/ubuntu/.opam/4.12.0/lib/base/base_internalhash_types /home/ubuntu/.opam/4.12.0/lib/base/caml/caml.cmxa /home/ubuntu/.opam/4.12.0/lib/sexplib0/sexplib0.cmxa /home/ubuntu/.opam/4.12.0/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/ubuntu/.opam/4.12.0/lib/base/base.cmxa -I /home/ubuntu/.opam/4.12.0/lib/base /home/ubuntu/.opam/4.12.0/lib/ocaml/compiler-libs/ocamlcommon.cmxa /home/ubuntu/.opam/4.12.0/lib/ocaml-compiler-libs/common/ocaml_common.cmxa /home/ubuntu/.opam/4.12.0/lib/ppxlib/astlib/astlib.cmxa /home/ubuntu/.opam/4.12.0/lib/stdlib-shims/stdlib_shims.cmxa /home/ubuntu/.opam/4.12.0/lib/ppxlib/ast/ppxlib_ast.cmxa /home/ubuntu/.opam/4.12.0/lib/ocaml-compiler-libs/shadow/ocaml_shadow.cmxa /home/ubuntu/.opam/4.12.0/lib/ppxlib/print_diff/ppxlib_print_diff.cmxa /home/ubuntu/.opam/4.12.0/lib/ppx_derivers/ppx_derivers.cmxa /home/ubuntu/.opam/4.12.0/lib/ppxlib/traverse_builtins/ppxlib_traverse_builtins.cmxa /home/ubuntu/.opam/4.12.0/lib/ppxlib/stdppx/stdppx.cmxa /home/ubuntu/.opam/4.12.0/lib/ppxlib/ppxlib.cmxa /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/libname/ppx_inline_test_libname.cmxa /home/ubuntu/.opam/4.12.0/lib/ppx_inline_test/ppx_inline_test.cmxa .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/dune__exe___ppx.cmx)
+$ (cd _build/.sandbox/ae48f7a20808ebd87316bed596845d7f/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tp9_etu"' -o tp9_etu.pp.ml --impl tp9_etu.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+> File "tp9_etu.ml", line 7, characters 9-12:
+> 7 |     type rec result = 
+>              ^^^
+> Error: Syntax error: 'end' expected
+> File "tp9_etu.ml", line 3, characters 2-8:
+> 3 |   struct
+>       ^^^^^^
+>   This 'struct' might be unmatched
+[1]
