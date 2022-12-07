@@ -1,0 +1,62 @@
+Nom       : Lafargue
+Prénom    : Héloïse
+Groupe TP : C
+
+Les « ... » indiquent les endroits à compléter.
+
+=====[ Temps passé ]============================================================
+
+Ces informations de temps sont demandées à titre indicatif et ne sont pas
+prises en compte dans la notation du projet.
+
+
+* Temps passé sur la V1 : 14 heures
+* Temps passé sur la V2 : 7 heures
+
+Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
+
+
+=====[ Questions ]==============================================================
+
+--------------------------------------------------------------------------------
+Pourquoi l'exception OperationInterditeException ne peut pas être définie
+comme vérifiée par le compilateur ?
+--------------------------------------------------------------------------------
+
+Cette exception n'est pas vérifiée par le compilateur elle n'est présente 
+que lorsqu'il y a procuration du jeu.
+
+--------------------------------------------------------------------------------
+Expliquer ce qu'il faut faire pour ajouter un nouveau niveau de jeu, par
+exemple la stratégie lente (C13).  Pour plus de précision, on numérotera
+les étapes à faire.
+--------------------------------------------------------------------------------
+
+1. Créer une nouvelle classe stratégie lente qui implémente l'interface
+Strategie.
+2. Définir les méthodes de constructeur pour la stratégie lente : 
+getPrise et toString.
+3. Ajouter une levée d'exception si nécessaire, et un traitement de ces 
+exceptions levées dans la classe Arbitre.
+
+--------------------------------------------------------------------------------
+Expliquer ce qui permet, dans votre conception, de changer dynamiquement
+(en cours d'exécution du programme) la stratégie d'un joueur (C14).
+--------------------------------------------------------------------------------
+
+En ajoutant une méthode setStrategie dans la classe Joueur, on peut modifier la 
+stratégie du joueur pendant la partie. C'est comme pour tricheur pour un joueur 
+humain. L'arbitre se charge de changer la stratégie de ce joueur avec la méthode
+setStrategie définie pour la classe Joueur. 
+
+
+=====[ Explications ]===========================================================
+
+--------------------------------------------------------------------------------
+Donner ici les explications supplémentaires utiles à la compréhension du
+travail rendu.
+--------------------------------------------------------------------------------
+
+...
+
+--------------------------------------------------------------------------------
