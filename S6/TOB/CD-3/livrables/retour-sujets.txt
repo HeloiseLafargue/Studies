@@ -1,0 +1,9 @@
+On cherche les fonctionnalités dans le premier sujet. J'ai peur que vous soyez très rapidement coincés. J'ai déjà validé un tel sujet, mais le résultat final n'a pas été très bon, pas à cause du groupe, mais juste parce que le sujet est difficile à enrichir. Il faut une interface graphique (pas clair à la lecture), interagir avec cette interface, créer une ambiance, ..., pour que ça marche.
+
+Second sujet. Java étant naturellement multiplateforme, il n'y a pas lieu de dire multiplateforme. Le sujet paraît léger et en même temps plein de difficultés techniques. Un peu comme le premier sujet, il faudra qu'il soit riche en fonctionnalités pour être convaincant. Il me semble toutefois offrir une meilleure répartition des tâches dans le groupe.
+
+Convaincu par le 3ème sujet.
+
+On en rediscute par mail ou en TD ?
+
+22/02 Lecture de musique validé en TD.
