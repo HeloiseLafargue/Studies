@@ -1,0 +1,84 @@
+clear all;
+close all;
+format long;
+
+%%%%%%%%%%%%
+% PARAMÈTRES
+%%%%%%%%%%%%
+
+% taille de la matrice symétrique
+n = 200;
+
+% type de la matrice (voir matgen_csad)
+% imat == 1 valeurs propres D(i) = i
+% imat == 2 valeurs propres D(i) = random(1/cond, 1) avec leur logarithmes
+%                                  uniformément répartie, cond = 1e10
+% imat == 3 valeurs propres D(i) = cond**(-(i-1)/(n-1)) avec cond = 1e5
+% imat == 4 valeurs propres D(i) = 1 - ((i-1)/(n-1))*(1 - 1/cond) avec cond = 1e2
+
+imat = 2;
+
+    % on génère la matrice (1) ou on lit dans un fichier (0)
+    % si vous avez déjà généré la matrice d'une certaine taille et d'un type donné
+    % vous pouvez mettre cette valeur à 0
+    genere = 1;
+    
+    % méthode de calcul
+    v = 10; % eig
+    [W10, V10, flag10] = eigen_2022(imat, n, v, [], [], [], [], [], genere);
+    
+    % nombre maximum de couples propres calculés
+    %m = 100;
+    m =20;
+    percentage = 0.4;
+    
+    % on génère la matrice (1) ou on lit dans un fichier (0)
+    genere = 0;
+    
+    % tolérance
+    eps = 1e-8;
+    % nombre d'itérations max pour atteindre la convergence
+    maxit = 10000;
+    
+    % méthode de calcul
+    v = 11; % power
+    [W11, V11, flag11] = eigen_2022(imat, n, v, m, eps, maxit, percentage, [], genere);
+    
+    % méthode de calcul
+    v = 12; % power
+    [W12, V12, flag12] = eigen_2022(imat, n, v, m, eps, maxit, percentage, [], genere);
+        
+    % Subspace iteration method v0
+    v = 0;
+    [W0, V0, flag0] = eigen_2022(imat, n, v, m, eps, maxit, percentage, [], genere);
+
+%     figure('name', 'Eigenvalues (Q14)');
+%     load('iter_v0');
+%     subplot(2, 2, 1);
+%     plot(W0);
+%     title('Eigenvalues v0');
+    
+    % Subspace iteration method v1
+    v = 1;
+    [W1, V1, flag1] = eigen_2022(imat, n, v, m, eps, maxit, percentage, [], genere);
+%     load('iter_v1');
+%     subplot(2, 2, 2);
+%     plot(W1);
+%     title('Eigenvalues v1');
+
+
+    % Subspace iteration method v2
+    v = 2;
+    [W2, V2, flag2] = eigen_2022(imat, n, v, m, eps, maxit, percentage, [], genere);
+%     load('iter_v2');
+%     subplot(2, 2, 3);
+%     plot(W2);
+%     title('Eigenvalues v2');
+    
+    % Subspace iteration method v3
+    v = 3;
+    [W3, V3, flag3] = eigen_2022(imat, n, v, m, eps, maxit, percentage, [], genere);
+%     load('iter_v3');
+%     subplot(2, 2, 4);
+%     plot(W3);
+%     title('Eigenvalues v3');
