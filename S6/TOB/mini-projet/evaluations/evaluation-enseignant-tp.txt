@@ -1,0 +1,14 @@
+=====[ Relecture du code ]======================================================
+
+Remarque : n points de pénalité ==> n points perdus sur la note.
+
+Fichier LISEZ-MOI.txt : -1
+    question 2 : réponse fausse : -1
+
+Forme : -0.5
+    * choix des identifiants		-0.5
+	en particulier les paramètres de creerCercle (voir retour fait aux étudiants)
+
+Total pénalités : 1.5
+
+--------------------------------------------------------------------------------

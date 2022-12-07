@@ -1,0 +1,23 @@
+
+# Remarques générales ################################################
+
+Tenir compte des remarques générales disponibles via Moodle
+et de l'évaluation automatique disponible sur votre SVN via `svn update`.
+
+Elles ne sont pas reprises ici !
+
+
+# LISEZ-MOI.txt ######################################################
+
+* Question 1 : Pas de réponse
+
+* Question 2 : Réponse incomplète : que faut-il faire précisément ?
+
+
+# Remarques supplémentaires ##########################################
+
+* On peut simplifier le code de contient(Point p)
+* Il est possible de factoriser la déclaration pi en début de fichier
+* Pas besoin d'ajouter le suffixe "2" aux attributs des setters
+* Attention aux parenthèses dans le calcul des coordonnées du milieu
+

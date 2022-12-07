@@ -1,0 +1,10 @@
+Début de la vérification...
+[ERROR] Cercle.java:69: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:75: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:81: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:88: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:101: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:109: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:116: Balise Javadoc @return manquante. [JavadocMethod]
+[ERROR] Cercle.java:168: Balise Javadoc @return manquante. [JavadocMethod]
+Vérification terminée.

@@ -1,0 +1,35 @@
+File Cercle.java: 601 tokens, 179 lines
+Total input: 1 file (1 new, 0 old), 601 tokens
+
+Cercle.java: line 37-41 [60]
+Cercle.java: line 53-57
+<     	double x = (p1.getX() + p2.getX()) / 2;		// l'abcisse du centre
+<     	double y = (p1.getY() + p2.getY()) / 2;		// l'ordonnée du centre
+<     	this.centre = new Point(x,y);
+<     	this.rayon = p1.distance(p2) / 2;
+<     	this.couleur = Color.blue; 
+---
+>     	double x = (p1.getX() + p2.getX()) / 2;		// l'abcisse du centre
+>     	double y = (p1.getY() + p2.getY()) / 2;		// l'ordonnée du centre
+>     	this.centre = new Point(x,y);
+>     	this.rayon = p1.distance(p2) / 2;
+>     	this.couleur = col;
+
+Cercle.java: line 35-37 [34]
+Cercle.java: line 173-175
+<     public Cercle (Point p1, Point p2) {
+<     	assert p1 != null && p2 != null && p1.distance(p2) != 0;
+<     	double x = (p1.getX() + p2.getX()) / 2;		// l'abcisse du centre
+---
+>  	public static Cercle creerCercle(Point c, Point p) {
+>  		assert c != null && p != null && c.distance(p)!= 0;
+>  		double rayon = c.distance(p); 
+
+Cercle.java: line 51-52 [28]
+Cercle.java: line 173-174
+<     public Cercle(Point p1, Point p2, Color col) {
+<     	assert p1 != null && p2 != null && p1.distance(p2) != 0 && col != null;
+---
+>  	public static Cercle creerCercle(Point c, Point p) {
+>  		assert c != null && p != null && c.distance(p)!= 0;
+

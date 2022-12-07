@@ -1,0 +1,27 @@
+| Attention, les pénalités sont calculées sur 6 points qui
+| seront ensuite ramenés sur 3.  Les pénalités affichées sont
+| donc le double des pénalités réelles.
+
+Compilation de Cercle.java : OK.
+Compilation de SujetCercleTest.java : OK.
+Compilation de CercleTest.java : OK.
+Test CercleTest : Tests run: 4,  Failures: 3	(voir evaluations/penalites1/CercleTest.log)
+    1) testerE12(CercleTest)
+        AssertionError: E12 : Centre de C3 incorrect (x) expected:<1.5> but was:<2.0>
+    2) testerE13(CercleTest)
+        AssertionError: E13 : Centre de C4 incorrect (x) expected:<3.0> but was:<4.0>
+    3) testerE14(CercleTest)
+        AssertionError: E14 : Centre de C5 incorrect (x) expected:<8.0> but was:<12.0>
+
+Essai en supprimant l'option -ea
+Test CercleTest : Tests run: 4,  Failures: 3	(voir evaluations/penalites1/CercleTest.log)
+    1) testerE12(CercleTest)
+        AssertionError: E12 : Centre de C3 incorrect (x) expected:<1.5> but was:<2.0>
+    2) testerE13(CercleTest)
+        AssertionError: E13 : Centre de C4 incorrect (x) expected:<3.0> but was:<4.0>
+    3) testerE14(CercleTest)
+        AssertionError: E14 : Centre de C5 incorrect (x) expected:<8.0> but was:<12.0>
+
+CercleTest ne fonctionne pas !	(pénalité : 2)
+JavaDoc automatique de Cercle : OK
+Total pénalités V1 : 2

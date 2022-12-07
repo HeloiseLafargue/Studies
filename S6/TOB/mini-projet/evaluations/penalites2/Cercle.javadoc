@@ -1,0 +1,8 @@
+Début de la vérification...
+[ERROR] Cercle.java:126:12: Balise Javadoc @param inutilisée pour 'couleur2'. [JavadocMethod]
+[ERROR] Cercle.java:128:38: Balise Javadoc @param manquante pour 'couleur'. [JavadocMethod]
+[ERROR] Cercle.java:134:12: Balise Javadoc @param inutilisée pour 'rayon2'. [JavadocMethod]
+[ERROR] Cercle.java:136:37: Balise Javadoc @param manquante pour 'rayon'. [JavadocMethod]
+[ERROR] Cercle.java:142:12: Balise Javadoc @param inutilisée pour 'diametre2'. [JavadocMethod]
+[ERROR] Cercle.java:144:40: Balise Javadoc @param manquante pour 'diametre'. [JavadocMethod]
+Vérification terminée.

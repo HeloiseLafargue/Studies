@@ -1,0 +1,37 @@
+Nom       : LAFARGUE
+Prénom    : Héloïse
+Groupe TP : C
+
+
+Consigne :  Ci-dessous, répondre à la place des « ... ».
+
+
+=====[ Temps ]==================================================================
+
+Temps passé sur la V1 : 5 heures 
+Temps passé sur la V2 : 30 minutes
+Pour la V2 on ne tiendra pas compte du temps passé sur la V1.
+Bien sûr, les temps renseignés ici ne sont pas pris en compte dans la notation.
+
+
+=====[ Questions ]==============================================================
+
+Indiquer la relation UML entre Cercle et le Point centre du cercle.
+-------------------------------------------------------------------
+
+C'est une relation de délégation de type composition.
+
+
+Comment est réalisée l'exigence E18 ?
+-------------------------------------
+
+Il ne faut pas vraiment translater le centre car il est spécifique à la classe Cercle, on ne doit pas pouvoir le translater. En effet dans une relation de composition, il s'agit d'un couplage fort : la durée de vie des objets est liée.
+
+
+
+=====[ Explications ]===========================================================
+
+(Facultatif) Donner ici les explications supplémentaires utiles à la
+compréhension du travail rendu.
+
+...
