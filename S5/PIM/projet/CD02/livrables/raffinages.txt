@@ -1,0 +1,87 @@
+Compresser
+
+R0 : Compresser un fichier texte avec le codage de Huffman
+
+R1 : Comment « compresser un fichier texte avec le codage de Huffman »
+
+    Construire l’arbre de Huffman associé au texte.
+    En déduire le code de chaque caractère.
+    Encoder le texte.
+    Stocker le codage utilisé dans le texte encodé.
+
+R2.1 : Comment « construire l’arbre de Huffman associé au texte » ?
+
+    Huff : in out T_Arbre
+  
+    Créer une liste chaînée contenant les feuilles (caractère du texte et à sa fréquence).
+    Trier la liste chaînée.
+    
+    Tant Que l'arbre n'est pas vide Faire :
+        Sélectionner les deux arbres de plus petite racine.
+        Supprimer ces deux arbres de la liste.
+        Les fusionner en un nouvel arbre avec comme racine est la somme des fréquences des deux fils.
+        Insérer l'arbre dans la liste chaînée de l'arbre obtenu
+    Fin Tant Que
+
+
+R3.1 : Comment « Créer une liste chaînée contenant les feuilles (caractère du texte et à sa fréquence) » ?
+    Frequence : in out Integer
+    Huff := Null
+
+    Tant Que on a pas fini de parcourir le fichier
+        Lire le caractère
+        Incr_Freq(Huff, Caractere)
+        Ecrire la valeur du caractère
+    Fin TQ
+
+    Insérer la feuille dans l'arbre Huff
+    Fermer le fichier
+ 
+R3.2 : Comment "Trier la liste chaînée" ?
+    Huff := Tri(Huff).
+    Afficher la liste triée Huff.
+    
+R2.2 : Comment « en déduire le code de chaque caractère » ?
+
+    Huff : in T_Arbre
+    Codes : out T_Arbre
+
+    Parcours(Arbre, Code) :
+        Si Arbre est une feuille  c :
+            Ajouter [C, Code] à Codes
+        Si Arbre = Noeud(x,g,d) :
+            Parcours(g, Code + « 0»)
+            Parcours(d, Code + « 1»)
+
+
+R2.3 : Comment « encoder le texte » ?
+
+    Codes : in T_Arbres
+    Texte : in Fichier.txt
+    Texte_Encodé : out Fichier.txt.hff
+
+    Pour chaque caractère c de Texte :
+        c_encodé <- Codes[c]
+        Ecrire c_encodé dans Texte_Encodé
+    Fin Pour
+
+
+Décompresser
+
+R0 : Décompresser un fichier encodé selon le codage de Huffman.
+
+R1 : Comment “décompresser un fichier encodé selon le codage de Huffman” ?
+
+    Texte : in Fichier .hff
+
+    Récupérer le tableau du codage de Huffman présent dans le texte encodé
+    Décoder le texte
+
+R2 : Comment “décoder le texte” ?
+
+    Texte_Décodé : out Fichier .txt
+
+    Pour chaque caractère c du texte encodé :
+        c_décodé <- Codes[c]
+        Ecrire c_décodé dans Texte_Décodé
+    Fin Pour

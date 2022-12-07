@@ -1,0 +1,12 @@
+La démonstration consistera en trois tests.
+
+Compression et décompression d'un fichier contenant une seule ligne.
+    ligne.txt
+
+Compression et décompression d'un fichier contenant un paragraphe.
+    paragraphe.txt   
+    
+Compression et décompression d'un fichier contenant un texte.
+    texte.txt   
+    
+Compression et décompression de plusieurs fichiers en même temps.
