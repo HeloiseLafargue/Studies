@@ -1,0 +1,7 @@
+
+
+Puedes hacer operaciones y ver como funcionan ls Árboles B+
+
+      https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html
+      
+puede haber pequeñas diferencis respecto a la teoría vista en clase.

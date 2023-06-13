@@ -1,0 +1,1 @@
+{"options":{"capped":true,"size":100096,"max":5},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_"}],"uuid":"0d5f526fd1fe40dca6215ca39619b79f"}
