@@ -1,0 +1,26 @@
+
+/**
+ * @dir doc
+ * @brief DOxygen doc
+ */
+
+/**
+ * @dir data
+ * @brief data for unittests, image output, ...
+ */
+
+/**
+ * @dir tools
+ * @brief scons compilation tools
+ */
+
+/**
+ * @dir library
+ * @brief libraries for the MOOV3D project
+ */
+
+  /**
+  * @dir moov3d
+  * @brief Base directory of the project. All includes begins here.
+  */
+

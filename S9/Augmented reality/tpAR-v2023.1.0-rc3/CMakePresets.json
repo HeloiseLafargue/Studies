@@ -1,0 +1,66 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 19,
+      "patch": 0
+    },
+    "configurePresets": [
+        {
+          "name": "Debug",
+          "description": "Debug build",
+          "binaryDir": "${sourceDir}/build/debug",
+          "cacheVariables": {
+            "CMAKE_BUILD_TYPE": "Debug"
+          },
+          "generator": "Unix Makefiles"
+        },
+        {
+          "name": "Release",
+          "description": "Release build",
+          "binaryDir": "${sourceDir}/build/release",
+          "cacheVariables": {
+            "CMAKE_BUILD_TYPE": "Release"
+          },
+          "generator": "Unix Makefiles"
+        },
+        {
+          "name": "Debug Salles N7",
+          "description": "Debug build at N7",
+          "inherits": "Debug",
+          "binaryDir": "${sourceDir}/cmake-build-debug",
+          "cacheVariables": {
+            "OpenCV_DIR": {
+                "type": "PATH",
+                "value": "/mnt/n7fs/ens/tp_gasparini/opencv2.4.13.4/share/OpenCV/"
+            }
+          },
+          "generator": "Unix Makefiles"
+        },
+        {
+          "name": "Release Salles N7",
+          "description": "Release build at N7",
+          "inherits": "Release",
+          "binaryDir": "${sourceDir}/cmake-build-release",
+          "cacheVariables": {
+            "OpenCV_DIR": {
+                "type": "PATH",
+                "value": "/mnt/n7fs/ens/tp_gasparini/opencv2.4.13.4/share/OpenCV/"
+            }
+          },
+          "generator": "Unix Makefiles"
+        }        
+      ],
+      "buildPresets": [
+        {
+          "name": "Release N7",
+          "configurePreset": "Release Salles N7",
+          "jobs": 8
+        },
+        {
+          "name": "Debug N7",
+          "configurePreset": "Debug Salles N7",
+          "jobs": 8
+        }
+      ]
+  }

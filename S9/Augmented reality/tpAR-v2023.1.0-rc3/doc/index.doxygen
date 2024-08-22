@@ -1,0 +1,144 @@
+/** @mainpage TP Interfaces Realité Augmentée
+ *
+ * @section intro Introduction
+ *
+ *The objective of these TP sessions is to build a simple augmented reality application using OpenCV for the camera tracking part and OpenGL for the rendering. The exercises that will be proposed are meant to gradually introduce you to the OpenCV libraries and build all the function that are needed for a camera tracker in an incremental way, so that you will be able to test and debug each function, before plugging all together in the camera tracker class.
+The main idea is to use a chessboard as a marker and render on top of that the augmented reality. The final application should render an OpenGL teapot on top of the chessboard. We will get there step by step, first detecting the chessboard, then create some basic rendering in OpenCV, and at last plugging everything in the OpenGL pipeline.
+ *
+ *
+ * @section org Code Organization
+ *
+ * The directory is organized as follows:
+ *
+ * - ``doc`` contains a pdf copy of this text, a pdf copy of the reduced opencv tutorials, a pdf copy of the full, original opencv tutorial, and a pdf copy of the API reference manual of opencv (ie the copy of the online documentation). 
+ *
+ * - ``data`` contains some images, videos and other data that will be used through the TP. 
+ *
+ * - ``src`` contains the source files that you have to modify and complete; they are organize in directories:
+ *
+ *     - ``tutorials`` contains the code used in the tutorials, in case you need to try it;
+ *     - ``tp`` contains the files that you need to modify and complete through all the sessions of the TP.
+ *
+ * - ``3dparty`` this directory contains a library that will be used at the end of the TP. You don't have to worry (or do anything...) about this directory.
+ * 
+ * @section indetails In details
+ *  - @subpage installation
+ *  - @subpage utilisation
+ *  - @subpage history
+ *
+ *
+ * @section team Team
+ *       - Simone Gasparini
+ *       - Sylvie Chambon
+ */
+
+
+/** @page installation Installation
+ *
+ * 
+ * @section install_linux Installation on Linux
+ *
+
+###  Dependencies
+
+The project depends on:
+
+- OpenCV
+- OpenGL
+- GLM ([webpage](http://devernay.free.fr/hacks/glm/)) which provides a more complete interface to the OBJ format (i.e. it manages textures, materials etc.).
+
+If at any stage you get an error about missing ``Xi`` and ``Xmu`` library, you need to install them. In linux you can do
+
+    sudo apt-get install libxi-dev libxmu-dev.
+
+###  Setting up and building:
+
+OpenCV and OpenGL are normally already installed on your machine. In case you may have a look at the next section to install OpenCV on your own machine. As for GLM, it comes with the project, so it will be compiled and built the first time it is needed.
+
+In order to setting up the project, from the root of the project do:
+
+    mkdir build
+    cd build
+    cmake .. 
+
+Then each application can be compiled by simply doing a
+
+    make <filename_without_extension>
+
+If you run
+
+    make help
+
+a list of all possible targets is displayed. Finally, running 
+
+    make clean
+
+will delete all the executable and the compilation objects.
+
+In case you want to try the code on a different machine, you need to first install the OpenCV libraries (from (here)[http://opencv.org/downloads.html]) and then do 
+
+    cmake .. -DOpenCV_DIR=path/to/OpenCVConfig.cmake 
+
+in order to specify the directory where you build them. More in general, you need to provide the path to the file ``OpenCVConfig.cmake``, which you can find e.g. with 
+
+    locate OpenCVConfig.cmake 
+
+from your shell.
+
+In order to generate the documentation you need have doxygen and graphviz installed. On linux:
+
+    sudo apt-get install doxygen graphviz.
+
+
+On Mac OSX with homebrew
+
+    brew install doxygen graphviz.
+
+Then a 
+On Mac OSX with homebrew
+
+    make doc
+
+will generate the documentation in the ``doc`` folder of your build.
+
+
+#### Installing OpenCV 
+
+You can download the code from [here](http://opencv.org/downloads.html) or clone the [github repository](https://github.com/itseez/opencv)
+Create a `build` directory where to build the library. It also advisable to set an non-system install directory, so that it will be easier to set up the environment later:
+
+    mkdir build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=`pwd`/install
+    make install -j n
+
+
+You can even run ```ccmake ..``` to set up other options (eg. CUDA support).
+ */
+
+
+/** @page utilisation Utilisation
+ * 
+ * Ech application can be compiled by simply doing a
+
+    make <filename_without_extension>
+
+The executable will be in the ``bin`` folder of your build. If you run
+
+    make help
+
+a list of all possible targets is displayed.
+ *
+ 
+Remember to set the ``LD_LIBRARY_PATH`` to allow your application to access the project libraries:
+
+    export $LD_LIBRARY_PATH=/home/<yourhome>/<path/to/code>/3dparty/glm/build/lib:$LD_LIBRARY_PATH
+ 
+Also you may want to add the path to OpenCV if they are not installed in the system.
+ *
+ */
+
+
+/** @page history history
+ * - October 2013 : First Version
+ * - October 2014 : First Version revised
+ */
+
