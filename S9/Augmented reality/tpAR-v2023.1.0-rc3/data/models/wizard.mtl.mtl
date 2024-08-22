@@ -1,0 +1,21 @@
+#Produced by Art of Illusion 2.8.1, Thu Apr 01 15:00:48 PDT 2010
+newmtl hat
+Kd 0.67 0.2948 0.2948
+Ks 0 0 0
+Ka 0.67 0.2948 0.2948
+illum 1
+newmtl coat
+Kd 0.49834 0.3944 0.58
+Ks 0 0 0
+Ka 0.49834 0.3944 0.58
+illum 1
+newmtl skin
+Kd 0.87 0.79309 0.7221
+Ks 0 0 0
+Ka 0.87 0.79309 0.7221
+illum 1
+newmtl staff
+Kd 0.49 0.31438 0.2156
+Ks 0 0 0
+Ka 0.49 0.31438 0.2156
+illum 1

@@ -1,0 +1,29 @@
+#Produced by Art of Illusion 2.8.1, Thu Apr 01 23:51:44 PDT 2010
+newmtl Sword
+Kd 1 1 1
+Ks 0 0 0
+Ka 1 1 1
+illum 1
+newmtl Armor
+Kd 0.45 0.4275 0.225
+Ks 1 1 1
+Ka 0.45 0.4275 0.225
+illum 2
+Ns 57
+newmtl Armor_3
+Kd 0.45 0.405 0
+Ks 1 1 1
+Ka 0.45 0.405 0
+illum 2
+Ns 57
+newmtl Face
+Kd 0 0 0
+Ks 0 0 0
+Ka 0 0 0
+illum 1
+newmtl Armor_2
+Kd 0.33 0.33 0.33
+Ks 1 1 1
+Ka 0.33 0.33 0.33
+illum 2
+Ns 50
